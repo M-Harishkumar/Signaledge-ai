@@ -16,8 +16,9 @@ import {
   HelpCircle,
   History,
   CheckCircle2,
+  Binary,
 } from 'lucide-react';
-import { SimulationSession } from '../types';
+import { SimulationSession, GeoMacroReport } from '../types';
 import { Card, CardHeader, CardTitle } from '../components/common/Card';
 import { Badge } from '../components/common/Badge';
 import { Button } from '../components/common/Button';
@@ -28,6 +29,7 @@ import { useToast } from '../context/ToastContext';
 export interface SimulationPageProps {
   sessions: SimulationSession[];
   initialScenario?: string;
+  initialTab?: 'SIMULATION' | 'CASCADE';
   onRunNewSimulation: (
     scenario: string,
     name: string,
@@ -41,6 +43,7 @@ export interface SimulationPageProps {
 export const SimulationPage: React.FC<SimulationPageProps> = ({
   sessions,
   initialScenario = '',
+  initialTab,
   onRunNewSimulation,
   onSelectCompany,
   onInvestigate,
@@ -60,7 +63,19 @@ export const SimulationPage: React.FC<SimulationPageProps> = ({
   // File Upload State
   const [uploadedFile, setUploadedFile] = useState<{ name: string; preview: string } | null>(null);
   const [isUploading, setIsUploading] = useState<boolean>(false);
+  const [activeMainTab, setActiveMainTab] = useState<'SIMULATION' | 'CASCADE'>(initialTab || 'SIMULATION');
+  const [eventInput, setEventInput] = useState<string>(
+    'OPEC+ announces an unannounced 1.2M bpd voluntary crude production cut amidst Middle Eastern shipping insurance escalation.'
+  );
+  const [cascadeLoading, setCascadeLoading] = useState<boolean>(false);
+  const [cascadeReport, setCascadeReport] = useState<GeoMacroReport | null>(null);
   const { showToast } = useToast();
+
+  useEffect(() => {
+    if (initialTab) {
+      setActiveMainTab(initialTab);
+    }
+  }, [initialTab]);
 
   useEffect(() => {
     if (initialScenario) {
@@ -76,6 +91,22 @@ export const SimulationPage: React.FC<SimulationPageProps> = ({
       }
     }
   }, [sessions]);
+
+  const handleGenerateCascade = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!eventInput.trim() || cascadeLoading) return;
+    setCascadeLoading(true);
+    try {
+      const res = await api.runGeoMacroAnalysis(eventInput);
+      setCascadeReport(res);
+      showToast('Step-by-Step Economic Impact Flow generated.', 'success');
+    } catch (e) {
+      console.error(e);
+      showToast('Failed to analyze economic flow.', 'error');
+    } finally {
+      setCascadeLoading(false);
+    }
+  };
 
   const templates = [
     {
@@ -150,31 +181,60 @@ export const SimulationPage: React.FC<SimulationPageProps> = ({
     <div className="space-y-6">
       {/* Top Banner */}
       <div className="p-6 rounded-2xl bg-[#111827] border border-[#1F293D]">
-        <div className="flex items-center gap-2 mb-1.5">
+        <div className="flex items-center gap-2 mb-1.5 flex-wrap">
           <span className="p-1 rounded bg-purple-500/10 text-purple-400">
             <BrainCircuit className="w-4 h-4" />
           </span>
           <span className="text-xs font-mono font-bold uppercase text-purple-400 tracking-wider">
-            Different Investor Perspectives & Market Simulation
+            Scenario & Economic Impact Simulation
           </span>
         </div>
         <h1 className="text-xl sm:text-2xl font-bold text-[#F3F4F6] tracking-tight font-display">
           Scenario & Market Impact Simulator
         </h1>
-        <p className="text-xs text-[#9CA3AF] mt-1 max-w-3xl">
-          Simulates how major events impact different market participants (foreign investors, domestic mutual funds, company leaders, and regulators) to see who benefits, who is at risk, and what could go wrong.
+        <p className="text-xs text-[#9CA3AF] mt-1 max-w-3xl leading-relaxed">
+          Simulate how major economic developments, policy changes, and supply-chain shifts impact market participants, Indian industries, and listed companies.
         </p>
       </div>
 
-      {/* Preset Scenarios */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        {templates.map((tpl, idx) => (
-          <div
-            key={idx}
-            onClick={() => {
-              setSessionName(tpl.name);
-              setScenarioInput(tpl.scenario);
-            }}
+      {/* Main Mode Tabs */}
+      <div className="flex border-b border-[#1F293D] gap-6 text-xs font-medium overflow-x-auto pb-1 flex-nowrap scrollbar-none shrink-0">
+        <button
+          onClick={() => setActiveMainTab('SIMULATION')}
+          className={`pb-2.5 -mb-px transition cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-2 ${
+            activeMainTab === 'SIMULATION'
+              ? 'border-b-2 border-purple-500 text-purple-400 font-semibold'
+              : 'text-[#9CA3AF] hover:text-white'
+          }`}
+        >
+          <BrainCircuit className="w-4 h-4" />
+          Different Investor Views Simulation
+        </button>
+        <button
+          onClick={() => setActiveMainTab('CASCADE')}
+          className={`pb-2.5 -mb-px transition cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-2 ${
+            activeMainTab === 'CASCADE'
+              ? 'border-b-2 border-teal-500 text-teal-400 font-semibold'
+              : 'text-[#9CA3AF] hover:text-white'
+          }`}
+        >
+          <Binary className="w-4 h-4" />
+          Step-by-Step Economic Impact Flow (6-Step Cascade)
+        </button>
+      </div>
+
+      {/* TAB 1: INVESTOR VIEWS SIMULATION */}
+      {activeMainTab === 'SIMULATION' && (
+        <>
+          {/* Preset Scenarios */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {templates.map((tpl, idx) => (
+              <div
+                key={idx}
+                onClick={() => {
+                  setSessionName(tpl.name);
+                  setScenarioInput(tpl.scenario);
+                }}
             className="p-3.5 rounded-xl bg-[#111827] hover:bg-[#161F30] border border-[#1F293D] hover:border-purple-500/40 transition cursor-pointer text-xs space-y-1"
           >
             <div className="flex items-center gap-1.5 font-bold text-[#F3F4F6]">
@@ -737,6 +797,170 @@ export const SimulationPage: React.FC<SimulationPageProps> = ({
                 </div>
               </div>
             </Card>
+          )}
+        </div>
+      )}
+        </>
+      )}
+
+      {/* TAB 2: STEP-BY-STEP ECONOMIC IMPACT FLOW (6-STEP CASCADE) */}
+      {activeMainTab === 'CASCADE' && (
+        <div className="space-y-6">
+          {/* Preset Events Bar */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              {
+                name: 'Middle East Freight & Oil Cut',
+                desc: 'OPEC+ 1.2M bpd cut amidst Persian Gulf shipping insurance escalation.',
+                event: 'OPEC+ announces an unannounced 1.2M bpd voluntary crude production cut amidst Middle Eastern shipping insurance escalation.',
+              },
+              {
+                name: 'Central Bank Rate Easing Cycle',
+                desc: 'Synchronized 50 bps repo rate cut lowering corporate cost of borrowing.',
+                event: 'RBI and US Federal Reserve execute synchronized 50 bps policy rate cuts amidst softening inflation.',
+              },
+              {
+                name: 'Rare Earth & Chip Export Curbs',
+                desc: 'Global export restrictions on critical battery minerals and advanced semiconductor nodes.',
+                event: 'Global export restrictions on critical EV battery minerals and advanced semiconductor fabrication tools.',
+              },
+              {
+                name: 'Domestic Defense Import Ban',
+                desc: 'Ministry of Defence issues positive indigenisation list banning 300+ sub-assemblies.',
+                event: 'Ministry of Defence issues new positive indigenisation list banning imports of 300+ avionics and radar sub-assemblies.',
+              },
+            ].map((p, pIdx) => (
+              <div
+                key={pIdx}
+                onClick={() => setEventInput(p.event)}
+                className="p-3.5 rounded-xl bg-[#111827] hover:bg-[#161F30] border border-[#1F293D] hover:border-teal-500/40 transition cursor-pointer text-xs space-y-1"
+              >
+                <div className="flex items-center gap-1.5 font-bold text-[#F3F4F6]">
+                  <Binary className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                  <span className="truncate">{p.name}</span>
+                </div>
+                <p className="text-[11px] text-[#9CA3AF] line-clamp-2">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Input Event Form */}
+          <Card variant="elevated">
+            <form onSubmit={handleGenerateCascade} className="space-y-4">
+              <div>
+                <label className="text-xs font-semibold text-[#F3F4F6] block mb-1">
+                  Global / Macroeconomic Event Description or News Headline
+                </label>
+                <textarea
+                  rows={3}
+                  value={eventInput}
+                  onChange={(e) => setEventInput(e.target.value)}
+                  placeholder="Paste geopolitical announcement, central bank rate decision, or tariff policy..."
+                  className="w-full bg-[#161F30] border border-[#1F293D] rounded-xl p-3 text-xs text-[#E5E7EB] focus:outline-none focus:border-teal-500/50 font-sans leading-relaxed"
+                />
+              </div>
+
+              <div className="flex items-center justify-between pt-2 border-t border-[#1F293D] flex-wrap gap-2">
+                <span className="text-xs text-[#6B7280] font-mono">
+                  6-Stage Impact Transmission Cascade Engine
+                </span>
+
+                <Button type="submit" size="md" isLoading={cascadeLoading}>
+                  <Play className="w-3.5 h-3.5 mr-1" /> Analyze Step-by-Step Impact
+                </Button>
+              </div>
+            </form>
+          </Card>
+
+          {/* Cascade Stages Report */}
+          {cascadeReport && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <h2 className="text-sm font-bold uppercase tracking-wider font-mono text-[#9CA3AF]">
+                  Impact Breakdown ({cascadeReport.stages?.length || 6} Steps)
+                </h2>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => {
+                    setSessionName(cascadeReport.event_text.substring(0, 36) + '...');
+                    setScenarioInput(cascadeReport.event_text);
+                    setActiveMainTab('SIMULATION');
+                  }}
+                >
+                  <BrainCircuit className="w-3.5 h-3.5 mr-1 text-purple-400" /> Test Across Investor Views
+                </Button>
+              </div>
+
+              <div className="space-y-4">
+                {cascadeReport.stages?.map((stage) => (
+                  <Card key={stage.stage_num} variant="elevated">
+                    <div className="flex items-start justify-between gap-2 mb-2 flex-wrap">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 text-xs font-mono font-bold">
+                          Step {stage.stage_num}
+                        </span>
+                        <h3 className="text-sm font-bold text-[#F3F4F6] font-display">{stage.stage_name}</h3>
+                      </div>
+
+                      <Badge
+                        variant={
+                          stage.confidence === 'FACT'
+                            ? 'teal'
+                            : stage.confidence === 'INFERENCE'
+                            ? 'blue'
+                            : 'amber'
+                        }
+                        size="sm"
+                      >
+                        {stage.confidence === 'FACT' ? 'Verified Fact' : stage.confidence === 'INFERENCE' ? 'Calculated' : 'Estimate'}
+                      </Badge>
+                    </div>
+
+                    <div className="space-y-2 text-xs text-[#D1D5DB] leading-relaxed font-sans">
+                      <div>
+                        <span className="font-mono text-[10px] text-[#6B7280] uppercase block">Event Trigger</span>
+                        <p className="text-[#9CA3AF]">{stage.input || stage.input_event}</p>
+                      </div>
+                      <div>
+                        <span className="font-mono text-[10px] text-teal-400 uppercase block">What Happens Next</span>
+                        <p className="text-[#F3F4F6]">{stage.transmission_mechanism || stage.transmitted_effect}</p>
+                      </div>
+                      {stage.next_cascade_target && (
+                        <div className="p-2.5 rounded-lg bg-[#0B0F17] border border-[#1F293D] font-mono text-[11px] text-[#9CA3AF]">
+                          <span className="text-emerald-400 font-bold">Next Effect &rarr; </span>
+                          {stage.next_cascade_target}
+                        </div>
+                      )}
+
+                      {(stage.affected_companies || stage.affected_entities) && ((stage.affected_companies?.length ?? 0) > 0 || (stage.affected_entities?.length ?? 0) > 0) && (
+                        <div className="pt-2 border-t border-[#1F293D] flex items-center gap-1.5 flex-wrap">
+                          <span className="text-[10px] font-mono text-[#6B7280]">Affected Companies:</span>
+                          {(stage.affected_companies || stage.affected_entities || []).map((sym: string) => (
+                            <div key={sym} className="flex items-center gap-1">
+                              <button
+                                onClick={() => onSelectCompany(sym)}
+                                className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono font-bold hover:underline cursor-pointer text-xs"
+                              >
+                                {sym}
+                              </button>
+                              {onInvestigate && (
+                                <button
+                                  onClick={() => onInvestigate(sym)}
+                                  className="text-[9px] font-mono text-[#9CA3AF] hover:text-emerald-300"
+                                >
+                                  [research]
+                                </button>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       )}

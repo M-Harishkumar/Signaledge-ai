@@ -567,9 +567,13 @@ export function App() {
           )}
 
           {currentRoute === '/analysis' && (
-            <AnalysisPage
+            <SimulationPage
+              sessions={simulations}
+              initialScenario={simulationPresetScenario}
+              initialTab="CASCADE"
+              onRunNewSimulation={handleRunNewSimulation}
               onSelectCompany={handleSelectCompany}
-              onRunSimulation={handleTriggerSimulation}
+              onInvestigate={handleOpenInvestigate}
             />
           )}
 

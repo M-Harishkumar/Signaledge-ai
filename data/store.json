@@ -285,6 +285,12 @@
       "user_id": "usr-default-01",
       "created_at": "2026-10-08T19:11:38.695Z",
       "expires_at": "2026-11-07T19:11:38.695Z"
+    },
+    {
+      "token": "tok_d1bf8f6258477d0b83253ef088711bef67c84f2db406c589e93a9c80f0951ea2",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-08T19:47:45.459Z",
+      "expires_at": "2026-11-07T19:47:45.459Z"
     }
   ],
   "companies": [
@@ -4730,10 +4736,21 @@
         }
       ],
       "user_id": "usr-default-01",
-      "updated_at": "2026-10-08T19:11:39.659Z"
+      "updated_at": "2026-10-08T19:47:46.028Z"
     }
   ],
   "theses": [
+    {
+      "primary_symbol": "TATAMOTORS",
+      "sector": "Automotive",
+      "title": "Demerger Value Unlocking & JLR Deleveraging",
+      "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
+      "status": "ACTIVE",
+      "thesis_id": "th-1791488864599",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-08T19:47:44.599Z",
+      "updated_at": "2026-10-08T19:47:44.599Z"
+    },
     {
       "primary_symbol": "TATAMOTORS",
       "sector": "Automotive",
@@ -5882,6 +5899,20 @@
     }
   ],
   "historicalDeltas": [
+    {
+      "company_symbol": "SUZLON",
+      "field_changed": "Q3_ORDER_BOOK_DISCLOSURE",
+      "previous_value": "3.8 GW",
+      "new_value": "4.2 GW",
+      "source_tier": "TIER_1_OFFICIAL_REGULATORY",
+      "source_name": "BSE Exchange Corporate Filing",
+      "data_mode": "AUDITED",
+      "fact_level": "FACT",
+      "thesis_impact": "SUPPORTS",
+      "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
+      "delta_id": "dt-1791488866330-15",
+      "detected_at": "2026-10-08T19:47:46.330Z"
+    },
     {
       "company_symbol": "SUZLON",
       "field_changed": "Q3_ORDER_BOOK_DISCLOSURE",

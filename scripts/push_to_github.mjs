@@ -11,6 +11,13 @@ async function pushToRemote(remoteUrl, token) {
     process.exit(1);
   }
 
+  // Ensure 'main' branch exists
+  try {
+    await git.branch({ fs, dir, ref: 'main', checkout: true });
+  } catch (e) {
+    // branch already exists or already on main
+  }
+
   console.log(`Setting remote 'origin' -> ${remoteUrl}`);
   try {
     await git.addRemote({ fs, dir, remote: 'origin', url: remoteUrl, force: true });
@@ -25,7 +32,11 @@ async function pushToRemote(remoteUrl, token) {
     dir,
     remote: 'origin',
     ref: 'main',
-    onAuth: () => ({ username: token || process.env.GITHUB_TOKEN || 'x-access-token', password: '' }),
+    force: true,
+    onAuth: () => ({
+      username: token || process.env.GITHUB_TOKEN || 'x-access-token',
+      password: '',
+    }),
   });
 
   console.log('Push completed successfully!', pushResult);
@@ -41,7 +52,5 @@ if (remoteUrl) {
     process.exit(1);
   });
 } else {
-  console.log('Git repository is initialized and all 96 files are committed locally to main.');
-  console.log('To push to GitHub, run:');
-  console.log('node scripts/push_to_github.mjs <GITHUB_REPO_URL> <GITHUB_TOKEN>');
+  console.log('Usage: node scripts/push_to_github.mjs <GITHUB_REPO_URL> [GITHUB_TOKEN]');
 }

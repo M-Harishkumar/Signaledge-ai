@@ -35,8 +35,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   const intelligenceNavItems = [
-    { label: 'Different Investor Views', icon: <BrainCircuit className="w-4 h-4" />, route: '/simulation' },
-    { label: 'Economic & Regional Impact', icon: <Binary className="w-4 h-4" />, route: '/analysis' },
+    { label: 'Scenario & Economic Impact', icon: <BrainCircuit className="w-4 h-4" />, route: '/simulation' },
     { label: "Companies I'm Watching", icon: <Bookmark className="w-4 h-4" />, route: '/watchlists' },
     { label: 'Settings & Security', icon: <Settings className="w-4 h-4" />, route: '/settings' },
   ];
