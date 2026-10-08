@@ -2,6 +2,8 @@
   "name": "signaledge-os",
   "private": true,
   "version": "1.0.0",
+  "description": "AI-Powered Investment Opportunity Discovery Platform for Indian Equities",
+  "author": "Harishkumar M <harishkumar@signaledge.in>",
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",

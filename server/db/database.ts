@@ -352,10 +352,10 @@ export class Database {
 
     const defaultUser: StoredUser = {
       user_id: 'usr-default-01',
-      email: 'investor@signaledge.in',
+      email: 'harishkumar@signaledge.in',
       password_hash: defaultHash,
       password_salt: defaultSalt,
-      display_name: 'Aravind Kumar',
+      display_name: 'Harishkumar M',
       role: 'RETAIL_INVESTOR',
       investment_horizon: '7-15YR',
       risk_tolerance: 'MODERATE_AGGRESSIVE',

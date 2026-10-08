@@ -38,10 +38,10 @@ async function initAndCommit() {
     fs,
     dir,
     author: {
-      name: 'SignalEdge OS Developer',
-      email: 'developer@signaledge.in',
+      name: 'Harishkumar M',
+      email: 'harishkumar@signaledge.in',
     },
-    message: 'Initial commit: SignalEdge OS complete production release',
+    message: 'SignalEdge OS - Core release',
   });
 
   console.log('Committed successfully with SHA:', sha);

@@ -19,9 +19,9 @@ export const AuthPages: React.FC<AuthPagesProps> = ({
   onSwitchMode,
   onBackToHome,
 }) => {
-  const [email, setEmail] = useState('investor@signaledge.in');
+  const [email, setEmail] = useState('harishkumar@signaledge.in');
   const [password, setPassword] = useState('password123');
-  const [fullName, setFullName] = useState('Aravind Kumar');
+  const [fullName, setFullName] = useState('Harishkumar M');
   const [resetToken, setResetToken] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -82,8 +82,8 @@ export const AuthPages: React.FC<AuthPagesProps> = ({
             {mode === 'RESET_PASSWORD' && 'Set New Password'}
           </h1>
           <p className="text-xs text-[#9CA3AF]">
-            {mode === 'LOGIN' && 'Pre-recognition Indian equity intelligence & multi-agent simulations.'}
-            {mode === 'SIGNUP' && 'Access institutional research desks and 8-layer fundamental audits.'}
+            {mode === 'LOGIN' && 'Indian equity research, market signals & scenario testing.'}
+            {mode === 'SIGNUP' && 'Access research tools and 8-point fundamental checks.'}
             {mode === 'FORGOT_PASSWORD' && 'Enter your registered email to receive a recovery link.'}
             {mode === 'RESET_PASSWORD' && 'Choose a strong password with at least 8 characters.'}
           </p>
@@ -114,7 +114,7 @@ export const AuthPages: React.FC<AuthPagesProps> = ({
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    placeholder="E.g. Aravind Kumar"
+                    placeholder="E.g. Harishkumar M"
                     className="w-full bg-[#161F30] border border-[#1F293D] rounded-xl pl-9 pr-3 py-2.5 text-[#E5E7EB] placeholder-[#6B7280] focus:outline-none focus:border-emerald-500/50 font-sans"
                     required
                   />
@@ -131,7 +131,7 @@ export const AuthPages: React.FC<AuthPagesProps> = ({
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="investor@signaledge.in"
+                    placeholder="harishkumar@signaledge.in"
                     className="w-full bg-[#161F30] border border-[#1F293D] rounded-xl pl-9 pr-3 py-2.5 text-[#E5E7EB] placeholder-[#6B7280] focus:outline-none focus:border-emerald-500/50 font-sans"
                     required
                   />

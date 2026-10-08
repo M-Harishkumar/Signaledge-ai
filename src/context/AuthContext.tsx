@@ -44,8 +44,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         // Default initialized demo user
         setUser({
           user_id: 'usr-default-01',
-          email: 'investor@signaledge.in',
-          display_name: 'Aravind Kumar',
+          email: 'harishkumar@signaledge.in',
+          display_name: 'Harishkumar M',
           role: 'RETAIL_INVESTOR',
           investment_horizon: '7-15YR',
           risk_tolerance: 'MODERATE_AGGRESSIVE',

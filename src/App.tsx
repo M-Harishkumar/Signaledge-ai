@@ -364,8 +364,8 @@ export function App() {
   // Active user context (guaranteed user fallback)
   const activeUser = user || {
     user_id: 'usr-default-01',
-    email: 'investor@signaledge.in',
-    display_name: 'Aravind Kumar',
+    email: 'harishkumar@signaledge.in',
+    display_name: 'Harishkumar M',
     role: 'RETAIL_INVESTOR',
     investment_horizon: '7-15YR',
     risk_tolerance: 'MODERATE_AGGRESSIVE',
