@@ -1,0 +1,39 @@
+================================================================================
+THE GAZETTE OF INDIA : EXTRAORDINARY [PART II—SEC. 3(i)]
+MINISTRY OF POWER & MINISTRY OF NEW AND RENEWABLE ENERGY (MNRE)
+GOVERNMENT OF INDIA, NEW DELHI
+NOTIFICATION NO. 44/2026/PPA-RTC | DATED: 12TH FEBRUARY 2026
+================================================================================
+
+SUBJECT: MANDATORY ROUND-THE-CLOCK (RTC) RENEWABLE ENERGY PROCUREMENT OBLIGATIONS AND OPEN-ACCESS SURCHARGE WAIVERS FOR COMMERCIAL & INDUSTRIAL (C&I) CONSUMERS.
+
+1. STATUTORY BACKGROUND & OBJECTIVE:
+In exercise of powers conferred under Section 86(1)(e) read with Section 176 of the Electricity Act, 2003, the Central Government hereby notifies the revised Framework for Decarbonisation of Heavy Industrial Power Loads.
+
+2. KEY MANDATORY DIRECTIVES:
+(a) Mandatory Renewable Consumption Obligation (RCO):
+    All commercial and industrial entities having connected load exceeding 1.0 Megawatt (MW) shall mandatorily source a minimum of 40% of their total power consumption from firm Round-The-Clock (RTC) renewable sources (Wind-Solar-BESS Hybrid) by 31st March 2027, scaling to 55% by FY2029.
+
+(b) Inter-State Transmission System (ISTS) Charges Waiver:
+    Full 100% waiver of ISTS wheeling charges and cross-subsidy surcharges is hereby extended for 25 years for all hybrid wind-solar projects commissioned prior to 30th June 2028.
+
+(c) Priority Grid Connectivity & Curtailment Protection:
+    Power Grid Corporation of India Limited (POWERGRID) and State Transmission Utilities shall accord 'Must-Run' status to wind turbine generators and solar photovoltaic arrays deployed under this notification.
+
+3. IMPACT ASSESSMENT ON DOMESTIC CAPITAL GOODS & SUPPLY CHAIN:
+- Total Projected Wind Capacity Addition: 14.5 GW over 36 months.
+- Industrial captive power agreements (PPA) pipeline expected to generate ₹42,000 Crores in domestic wind turbine and solar module procurement contracts.
+- Domestic Value Addition (DVA) requirement enforced at 70% under Revised List of Models and Manufacturers (RLMM).
+
+4. BENEFICIARY INDUSTRY ACTORS & LISTED ENTITIES:
+- Pure-play domestic wind turbine original equipment manufacturers (OEMs): Suzlon Energy (NSE: SUZLON), Inox Wind (NSE: INOXWIND).
+- Integrated transmission & utility leaders: Tata Power (NSE: TATAPOWER), Power Grid Corp (NSE: POWERGRID).
+
+5. STATUTORY PENALTY FOR NON-COMPLIANCE:
+Non-compliant C&I consumers failing to satisfy annual compliance thresholds shall be subject to environmental regulatory levies of ₹1.85 per kWh of deficit energy, payable to the State Clean Energy Fund.
+
+================================================================================
+BY ORDER AND IN THE NAME OF THE PRESIDENT OF INDIA
+(JOINT SECRETARY TO THE GOVERNMENT OF INDIA, MINISTRY OF POWER)
+OFFICIAL REGULATORY GAZETTE NOTIFICATION (TIER-1 SOURCE)
+================================================================================

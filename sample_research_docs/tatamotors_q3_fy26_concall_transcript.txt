@@ -1,0 +1,49 @@
+================================================================================
+TATA MOTORS LIMITED (NSE: TATAMOTORS / BSE: 500570)
+Q3 FY26 EARNINGS CONFERENCE CALL TRANSCRIPT & ANALYST TRANSCRIPTION
+Date: 28th January 2026 | Time: 17:30 IST
+Management Attendees:
+- Group Chief Financial Officer & Executive Director
+- CEO, Passenger Electric Vehicles & Tata Passenger Mobility
+- Head of Investor Relations & M&A Strategy
+================================================================================
+
+EXECUTIVE OVERVIEW & MANAGEMENT INTRODUCTORY REMARKS:
+"Good evening, ladies and gentlemen. Thank you for joining us for our Q3 FY26 consolidated financial review.
+
+During the quarter, Tata Motors delivered resilient consolidated performance with EBITDA margins expanding to 14.8% (+120 bps YoY). The commercial vehicle (CV) segment sustained domestic market leadership at 39.2% market share, driven by strong fleet modernization demand under the national infrastructure capex program.
+
+In our Passenger Electric Mobility business, quarterly registrations grew +32% YoY, maintaining over 68% market share in the domestic 4-wheeler EV sector. JLR (Jaguar Land Rover) continued its profitable trajectory with net cash surplus surpassing £1.4 billion, supported by the global order bank for the Range Rover Electric platform."
+
+KEY METRICS HIGHLIGHTED:
+- Consolidated Revenue (TTM): ₹437,928 Crores (+14.2% YoY)
+- Consolidated Operating EBITDA: ₹64,813 Crores (Margin: 14.8%)
+- Return on Capital Employed (RoCE): 22.4% (vs 17.8% in FY25)
+- Consolidated Debt-to-Equity (D/E): 0.42x (Net cash positive at automotive level)
+- Promoter Holding: 46.4% | Promoter Share Pledge: 0.00% (Strictly zero encumbrance)
+- Operating Cash Flow (CFO) to PAT Ratio: 1.34x (Strong cash generation)
+
+STRATEGIC INITIATIVES & CORPORATE ACTIONS (DEMERGER ROADMAP):
+"As approved by the National Company Law Tribunal (NCLT) and equity shareholders, the demerger into two separately listed pure-play entities:
+1. Commercial Vehicles (CV) & related investments
+2. Passenger Vehicles (PV), EV Mobility, and JLR
+is progressing on schedule for Q1 FY27 market listing. This unlocks balance sheet autonomy, dedicated capital allocation, and distinct institutional investor valuation multiples."
+
+RAW MATERIAL & SUPPLY CHAIN PRESSURES:
+"While steel and aluminum prices remained range-bound, lithium-iron-phosphate (LFP) cathode input costs softened by ~8% QoQ. However, container dwell times at western ports increased by 3.5 days due to Red Sea rerouting, prompting us to maintain 45 days of component buffer stock at our Pune and Sanand manufacturing facilities."
+
+CAPEX GUIDANCE FOR FY27:
+- Annual Capex Budget: ₹32,000 Crores (consisting of ₹18,000 Cr at JLR and ₹14,000 Cr domestic EV/CV platforms)
+- Fully funded via internal operating cash generation without incremental balance sheet borrowings.
+
+QUESTION & ANSWER EXCERPTS (INSTITUTIONAL INVESTORS):
+
+Analyst (Morgan Stanley): "Could you elaborate on the domestic commercial vehicle cycle outlook given the GST e-way bill volume moderation in December?"
+Management: "We view the CV volume moderation as temporary pre-monsoon seasonality. Freight rates across key Delhi-Mumbai and Chennai corridors remain remunerative at ₹3.4/tonne-km. More importantly, bus fleet transition mandates under the PM-eBus Sewa initiative provide structural multi-year revenue visibility."
+
+Analyst (Kotak Institutional Equities): "How do you foresee the margin impact if crude-linked logistics and ocean freight insurance rates surge further?"
+Management: "Our localization level for domestic PV and EV platforms is now at 86%. Ocean freight escalation primarily impacts JLR export logistics to APAC, which represents less than 14% of consolidated deliveries. We retain hedging mechanisms that absorb up to a 200 bps currency/freight variance."
+
+================================================================================
+END OF TRANSCRIPT EXCERPT | VERIFIED CORPORATE DISCLOSURE (TIER-2 SOURCE)
+================================================================================

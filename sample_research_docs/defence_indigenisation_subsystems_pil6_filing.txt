@@ -1,0 +1,32 @@
+================================================================================
+MINISTRY OF DEFENCE (MoD) | DEPARTMENT OF MILITARY AFFAIRS
+GOVERNMENT OF INDIA, SOUTH BLOCK, NEW DELHI
+OFFICIAL POLICY DIRECTIVE: 6TH POSITIVE INDIGENISATION LIST (PIL-6)
+Ref No: MoD/DPA/2026/PIL-6/982 | Date: 19th January 2026
+================================================================================
+
+SUBJECT: EMBARGO ON IMPORT OF 348 MILITARY SUBSYSTEMS, AVIONICS MODULES, AND SPECIALIZED AEROSPACE COMPONENTS TO ACCELERATE DOMESTIC DEFENCE PRODUCTION.
+
+1. EXECUTIVE SUMMARY:
+To foster self-reliance in defence manufacturing (Aatmanirbhar Bharat) and minimize foreign exchange drainage on critical aerospace sub-assemblies, the Ministry of Defence hereby notifies the 6th Positive Indigenisation List comprising 348 strategic hardware and software systems.
+
+2. EMBARGO TIMELINES & RESTRICTED CATEGORIES:
+- Category A (Effective 1st April 2026): High-power microwave tubes, digital active phased-array radar sub-modules, and airborne early warning mission computers.
+- Category B (Effective 1st October 2026): Composite airframe fuselage sections, fly-by-wire flight control actuators, and tactical data-link transceivers.
+- Category C (Effective 1st April 2027): Single-crystal turbine blade castings, electro-optical targeting pods, and submarine acoustic stealth coatings.
+
+3. VALUE CREATION & CAPITAL ALLOCATION:
+- Estimated Domestic Procurement Value: ₹68,500 Crores across Indian defence PSUs and private tier-1 aerospace suppliers over the next 5 fiscal years.
+- Elimination of foreign technology license fee outflows resulting in an estimated 380 to 450 bps structural expansion in gross manufacturing margins for indigenous contractors.
+
+4. PRIMARY RECIPIENTS OF CAPITAL ALLOCATION & CONTRACT AWARDS:
+- Hindustan Aeronautics Limited (NSE: HAL): Primary integration authority for Tejas Mk1A, Mk2 fighter avionics, Light Combat Helicopter (Prachand) assemblies, and Sukhoi-30 MKI radar retrofits.
+- Bharat Electronics Limited (NSE: BEL): Digital radar processors, electronic warfare (EW) suites, and secure tactical communications.
+- Solar Industries India (NSE: SOLARINDS): Advanced energetic materials, warheads, and propellant casting.
+
+5. QUALITY CERTIFICATION & VALIDATION PROTOCOL:
+All indigenous replacement systems must obtain certification from the Directorate General of Aeronautical Quality Assurance (DGAQA) within 180 days of production sample delivery.
+
+================================================================================
+OFFICIAL DEFENCE PROCUREMENT REGULATION (TIER-1 SOURCE)
+================================================================================
