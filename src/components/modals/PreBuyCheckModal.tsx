@@ -177,6 +177,26 @@ export const PreBuyCheckModal: React.FC<PreBuyCheckModalProps> = ({
                       <span>Source: {layer.source}</span>
                     </div>
 
+                    {layer.evidence_status && (
+                      <div className="pl-6 pt-1 flex items-center gap-2 text-[10px] font-mono">
+                        <span className="text-[#9CA3AF]">Verify-First Status:</span>
+                        <span className={`font-semibold ${
+                          layer.evidence_status === 'VERIFIED'
+                            ? 'text-emerald-400'
+                            : layer.evidence_status === 'CONFLICTING'
+                            ? 'text-rose-400 font-bold'
+                            : layer.evidence_status === 'DATA_UNAVAILABLE'
+                            ? 'text-zinc-400'
+                            : 'text-amber-400'
+                        }`}>
+                          {layer.evidence_status}
+                        </span>
+                        {layer.evidence_source && (
+                          <span className="text-[#6B7280]">({layer.evidence_source})</span>
+                        )}
+                      </div>
+                    )}
+
                     {!isPass && !isUnknown && (
                       <div className="pl-6 text-[10px] text-rose-400 font-mono">
                         Why this is a risk: {layer.risk_if_failed}

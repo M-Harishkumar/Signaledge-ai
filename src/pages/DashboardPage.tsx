@@ -126,38 +126,56 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         />
       </div>
 
-      {/* Opportunity Pipeline Flow Bar */}
-      <Card variant="elevated">
-        <div className="flex items-center justify-between mb-3">
+      {/* Verify-First Core Architectural Workflow Banner */}
+      <Card variant="elevated" className="border-emerald-500/30 bg-[#0B0F17]/80">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-bold uppercase text-emerald-400">Research Progress</span>
-            <span className="text-[11px] text-[#6B7280]">Research workflow stages</span>
+            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <span className="text-xs font-mono font-bold uppercase text-emerald-400">
+              Verify-First Architectural Workflow
+            </span>
+            <span className="text-[10px] text-[#6B7280] hidden md:inline">
+              Source Authority • Freshness Validation • Forensic Gating
+            </span>
           </div>
           <button
-            onClick={() => onNavigate('/workspace')}
-            className="text-xs text-emerald-400 hover:underline flex items-center gap-1 font-mono"
+            onClick={() => onNavigate('/verify-first')}
+            className="text-xs text-emerald-400 hover:underline flex items-center gap-1 font-mono self-start sm:self-auto"
           >
-            Open Workspace <ArrowRight className="w-3.5 h-3.5" />
+            Verify-First Console <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+        {/* 9-Stage Connected Sequence */}
+        <div className="grid grid-cols-3 sm:grid-cols-9 gap-1.5 text-[11px] font-mono">
           {[
-            { label: '1. New Signals', count: opportunities.filter((o) => o.status === 'NEW').length, color: 'text-blue-400' },
-            { label: '2. In Research', count: opportunities.filter((o) => o.status === 'INVESTIGATING').length, color: 'text-amber-400' },
-            { label: '3. Passed Checks', count: opportunities.filter((o) => o.status === 'VALIDATED').length, color: 'text-emerald-400' },
-            { label: '4. Watching', count: opportunities.filter((o) => o.status === 'WATCHING').length, color: 'text-purple-400' },
-            { label: '5. Closed / Disproved', count: opportunities.filter((o) => o.status === 'INVALIDATED').length, color: 'text-rose-400' },
-          ].map((stage, idx) => (
+            { step: '1', title: 'DISCOVER', desc: 'F1–F7 Radar', route: '/discovery', active: true },
+            { step: '2', title: 'COLLECT', desc: 'Filings & Data', route: '/brief', active: true },
+            { step: '3', title: 'VERIFY', desc: 'Tier 1–4 Authority', route: '/verify-first', active: true, highlight: true },
+            { step: '4', title: 'CONNECT', desc: 'Supply Chain', route: '/discovery', active: true },
+            { step: '5', title: 'ANALYSE', desc: '5Y & DuPont', route: '/companies', active: true },
+            { step: '6', title: 'SCREEN', desc: 'Multi-Factor', route: '/screener', active: true },
+            { step: '7', title: 'SIMULATE', desc: 'Macro Cascade', route: '/simulation', active: true },
+            { step: '8', title: 'MONITOR', desc: 'Delta Tracking', route: '/watchlists', active: true },
+            { step: '9', title: 'REASSESS', desc: 'Thesis Review', route: '/workspace', active: true },
+          ].map((item, idx) => (
             <div
               key={idx}
-              onClick={() => onNavigate('/workspace')}
-              className="p-3 rounded-xl bg-[#0B0F17] hover:bg-[#161F30] border border-[#1F293D] transition cursor-pointer flex items-center justify-between"
+              onClick={() => onNavigate(item.route)}
+              className={`p-2 rounded-lg border transition cursor-pointer text-center flex flex-col justify-between ${
+                item.highlight
+                  ? 'bg-emerald-950/30 border-emerald-500/50 hover:bg-emerald-900/40 text-emerald-300'
+                  : 'bg-[#111827] border-[#1F293D] hover:bg-[#161F30] text-[#9CA3AF] hover:text-[#F3F4F6]'
+              }`}
             >
-              <div>
-                <span className="text-[10px] text-[#9CA3AF] block font-mono">{stage.label}</span>
-                <span className={`text-base font-bold font-mono ${stage.color}`}>{stage.count}</span>
+              <div className="flex items-center justify-between text-[9px] text-[#6B7280]">
+                <span>#{item.step}</span>
+                {idx < 8 && <span className="text-[#374151] hidden sm:inline">&rarr;</span>}
               </div>
+              <span className={`text-[10px] font-bold mt-1 ${item.highlight ? 'text-emerald-400' : 'text-[#E5E7EB]'}`}>
+                {item.title}
+              </span>
+              <span className="text-[9px] text-[#6B7280] truncate mt-0.5">{item.desc}</span>
             </div>
           ))}
         </div>

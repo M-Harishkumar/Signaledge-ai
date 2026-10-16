@@ -35,6 +35,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   const intelligenceNavItems = [
+    { label: 'Verify-First Research', icon: <ShieldCheck className="w-4 h-4 text-emerald-400" />, route: '/verify-first' },
     { label: 'Scenario & Economic Impact', icon: <BrainCircuit className="w-4 h-4" />, route: '/simulation' },
     { label: "Companies I'm Watching", icon: <Bookmark className="w-4 h-4" />, route: '/watchlists' },
     { label: 'Settings & Security', icon: <Settings className="w-4 h-4" />, route: '/settings' },

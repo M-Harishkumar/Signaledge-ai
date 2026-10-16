@@ -16,6 +16,7 @@ import { PortfolioRiskService } from './server/services/portfolioRiskService';
 import { FreshnessPolicy } from './server/services/freshnessPolicy';
 import { LiveNewsService } from './server/services/liveNewsService';
 import { lookupBrandOrSubsidiary } from './src/data/brandSubsidiaryMap';
+import { VerifyFirstService, PATENT_CONNECTION_STATEMENT, PATENT_METADATA } from './server/services/verifyFirstService';
 
 async function runTestSuite() {
   console.log('=== SIGNALEDGE OS LEAN & SIX SIGMA ARCHITECTURE VERIFICATION ===\n');
@@ -1884,6 +1885,117 @@ HAL and BEL identified as prime systems integrators with mandatory 60% domestic 
   assert(
     s18_companyNews.live_count + s18_companyNews.recent_count + s18_companyNews.stale_count + s18_companyNews.historical_count === s18_companyNews.total_articles,
     `Sprint 18 [10/10]: Freshness Breakdown Harmony: Total articles (${s18_companyNews.total_articles}) strictly equals sum of verified freshness partitions`
+  );
+
+  // =========================================================================
+  // SPRINT 19: VERIFY-FIRST EVIDENCE ENGINE & PATENT ADAPTATION VERIFICATION
+  // =========================================================================
+  console.log('\n--- SPRINT 19: VERIFY-FIRST EVIDENCE ENGINE & PATENT ADAPTATION ---');
+
+  // 19.1 Valid Supporting Tier 1 Evidence -> VERIFIED
+  const s19_tataDemerger = VerifyFirstService.getClaimById('vfc-tata-01');
+  assert(
+    s19_tataDemerger !== null &&
+    s19_tataDemerger.verification_status === 'VERIFIED' &&
+    s19_tataDemerger.source_tier === 'TIER_1_OFFICIAL_REGULATORY' &&
+    s19_tataDemerger.source_authority_score === 1.0 &&
+    s19_tataDemerger.support_level === 'DIRECT_SUPPORT',
+    `Sprint 19 [1/10]: Valid Supporting Tier 1 Evidence: Tata Motors demerger filing correctly verified (Status: ${s19_tataDemerger?.verification_status}, Tier 1 authority 1.0)`
+  );
+
+  // 19.2 Unsupported Rumor / Forum Source -> UNVERIFIED
+  const s19_rumor = VerifyFirstService.getClaimById('vfc-reliance-01');
+  assert(
+    s19_rumor !== null &&
+    s19_rumor.verification_status === 'UNVERIFIED' &&
+    s19_rumor.source_tier === 'TIER_4_UNVERIFIED_ESTIMATE' &&
+    s19_rumor.source_authority_score <= 0.20 &&
+    s19_rumor.support_level === 'UNSUPPORTED',
+    `Sprint 19 [2/10]: Unsupported Forum Rumors: Speculative unverified source correctly classified as UNVERIFIED (Score: ${s19_rumor?.source_authority_score})`
+  );
+
+  // 19.3 Missing Source Metadata / Grounding Excerpt -> DATA_UNAVAILABLE
+  const s19_missingData = VerifyFirstService.getClaimById('vfc-unknown-01');
+  assert(
+    s19_missingData !== null &&
+    s19_missingData.verification_status === 'DATA_UNAVAILABLE' &&
+    s19_missingData.freshness_status === 'UNKNOWN',
+    `Sprint 19 [3/10]: Missing Evidence Excerpts: Ungrounded claims cleanly flagged as DATA_UNAVAILABLE without hallucinating evidence`
+  );
+
+  // 19.4 Stale Financial Information (>105d for Quarterly Financials) -> STALE
+  const s19_staleClaim = VerifyFirstService.getClaimById('vfc-reliance-02');
+  assert(
+    s19_staleClaim !== null &&
+    s19_staleClaim.verification_status === 'STALE' &&
+    s19_staleClaim.freshness_status === 'STALE',
+    `Sprint 19 [4/10]: Temporal Freshness Enforcement: Outdated quarterly KPI (>105d) strictly flagged as STALE (Status: ${s19_staleClaim?.verification_status})`
+  );
+
+  // 19.5 Conflicting Financial Evidence Preservation -> CONFLICTING with Severity
+  const s19_conflictClaim = VerifyFirstService.getClaimById('vfc-tata-03');
+  assert(
+    s19_conflictClaim !== null &&
+    s19_conflictClaim.verification_status === 'CONFLICTING' &&
+    Array.isArray(s19_conflictClaim.conflicting_evidence) &&
+    s19_conflictClaim.conflicting_evidence.length > 0 &&
+    s19_conflictClaim.conflicting_evidence[0].severity === 'CRITICAL' &&
+    s19_conflictClaim.conflicting_evidence[0].source_name !== undefined,
+    `Sprint 19 [5/10]: Conflicting Evidence Preservation: Tata Motors Net Debt vs Ind AS 116 Lease liabilities flagged CONFLICTING with preserved counter-evidence`
+  );
+
+  // 19.6 Syndicated Derivative Detection (No Artificial Corroboration Inflation)
+  assert(
+    s19_rumor?.is_syndicated_derivative === true &&
+    s19_rumor?.original_attribution !== undefined,
+    `Sprint 19 [6/10]: Anti-Syndication Architecture: Syndicated reprints prevented from artificially inflating corroboration count`
+  );
+
+  // 19.7 Pre-Buy Gate Missing Data Enforcement: UNKNOWN Layer forces INVESTIGATE Verdict (Never PASS)
+  const s19_layerMissingRoce = VerifyFirstService.verifyGateLayerData('Layer 4: Capital Efficiency (RoCE)', undefined, 'RoCE > 15%');
+  assert(
+    s19_layerMissingRoce.status === 'UNKNOWN' &&
+    s19_layerMissingRoce.evidence_status === 'DATA_UNAVAILABLE',
+    `Sprint 19 [7/10]: Pre-Buy Gate Integrity: Missing fundamental metric strictly yields UNKNOWN status and DATA_UNAVAILABLE evidence`
+  );
+
+  // 19.8 Thesis Evidence Degradation Trigger -> NEEDS_REVIEW
+  const s19_auditGood = VerifyFirstService.auditThesisEvidence('th-01');
+  const s19_auditDegraded = VerifyFirstService.auditThesisEvidence('th-04');
+  assert(
+    s19_auditGood.thesis_id === 'th-01' &&
+    (s19_auditDegraded.overall_status === 'NEEDS_REVIEW' || s19_auditDegraded.overall_status === 'CRITICAL_CONCERNS') &&
+    (s19_auditDegraded.stale_claims_count > 0 || s19_auditDegraded.unverified_claims_count > 0),
+    `Sprint 19 [8/10]: Evidence Degradation Trigger: Active thesis degraded to NEEDS_REVIEW/CRITICAL_CONCERNS when underlying claims become stale or unverified`
+  );
+
+  // 19.9 Dynamic Claim Evaluator & Persistence
+  const s19_evalResult = VerifyFirstService.addClaim({
+    claim_text: 'BSE Circular confirms revision in transaction charges effective November 2026',
+    source_name: 'BSE Official Notice',
+    source_url: 'https://bseindia.com/notices/2026-11-charges.pdf',
+    source_tier: 'TIER_1_OFFICIAL_REGULATORY',
+    published_at: new Date().toISOString(),
+    evidence_excerpt: 'Notice is hereby given that transaction charges for cash equity segment are revised effective November 2026...',
+    temporal_type: 'REAL_TIME_MARKET_UPDATE',
+    company_symbol: 'BSE',
+  });
+  const s19_retrieved = VerifyFirstService.getClaimById(s19_evalResult.claim_id);
+  assert(
+    s19_evalResult.verification_status === 'VERIFIED' &&
+    s19_evalResult.source_authority_score === 1.0 &&
+    s19_retrieved?.claim_id === s19_evalResult.claim_id,
+    `Sprint 19 [9/10]: Dynamic Claim Evaluation & Persistence: Evaluated and indexed live claim with calibrated authority (Score: ${s19_evalResult.source_authority_score})`
+  );
+
+  // 19.10 Patent Connection & Academic Attribution Integrity
+  assert(
+    PATENT_METADATA.application_number === '202641118456' &&
+    PATENT_METADATA.institution.includes('Bannari Amman Institute of Technology') &&
+    PATENT_METADATA.legal_clarification.includes('does not originally cover investment research') &&
+    PATENT_CONNECTION_STATEMENT.includes('SignalEdge OS adapts related principles of source-authority assessment') &&
+    PATENT_CONNECTION_STATEMENT.includes('The original invention concerns adaptive learning paths; this project applies related principles to financial claims'),
+    `Sprint 19 [10/10]: Patent Disclosure Rigor: Verbatim statement accurately establishes connection without claiming granted status or global coverage`
   );
 
   console.log(`\n=== RESULTS: ${passed}/${total} TESTS PASSED ===\n`);

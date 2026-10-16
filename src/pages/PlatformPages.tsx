@@ -23,6 +23,7 @@ import {
   ArrowRight,
   CornerDownRight,
   Layers,
+  ShieldCheck,
 } from 'lucide-react';
 import { Company, Signal, Watchlist, User, TrackRecordEntry, TrackRecordStats } from '../types';
 import { Card, CardHeader, CardTitle, CardDescription } from '../components/common/Card';
@@ -650,7 +651,7 @@ export const SettingsPage: React.FC<{
   onLogout?: () => void;
   onDeleteAccount?: () => void;
 }> = ({ user, onUpdateUser, onLogout, onDeleteAccount }) => {
-  const [activeTab, setActiveTab] = useState<'PROFILE' | 'PROVIDERS' | 'DANGER'>('PROFILE');
+  const [activeTab, setActiveTab] = useState<'PROFILE' | 'PROVIDERS' | 'PATENT' | 'DANGER'>('PROFILE');
   const [name, setName] = useState(user.display_name);
   const [email, setEmail] = useState(user.email);
   const [horizon, setHorizon] = useState(user.investment_horizon);
@@ -718,6 +719,17 @@ export const SettingsPage: React.FC<{
           }`}
         >
           Data Connections & Usage
+        </button>
+        <button
+          onClick={() => setActiveTab('PATENT')}
+          className={`pb-3 -mb-px transition cursor-pointer flex items-center gap-1.5 ${
+            activeTab === 'PATENT'
+              ? 'border-b-2 border-emerald-500 text-emerald-400 font-semibold'
+              : 'text-[#9CA3AF] hover:text-white'
+          }`}
+        >
+          <ShieldCheck className="w-3.5 h-3.5" />
+          Academic & Patent Connection
         </button>
         <button
           onClick={() => setActiveTab('DANGER')}
@@ -881,7 +893,115 @@ export const SettingsPage: React.FC<{
         </div>
       )}
 
-      {/* TAB 3: Danger Zone */}
+      {/* TAB 3: Academic Project & Patent Connection */}
+      {activeTab === 'PATENT' && (
+        <div className="space-y-6 text-xs">
+          {/* Disclosure Card */}
+          <Card variant="elevated" className="border-emerald-500/30 bg-[#0B0F17]/90 space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 shrink-0">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-bold text-sm text-[#F3F4F6]">
+                  Academic Project & Patent Connection Disclosure
+                </h3>
+                <p className="text-[#9CA3AF] text-xs">
+                  Institutional project attribution and relationship to filed Indian patent application.
+                </p>
+              </div>
+            </div>
+
+            {/* Mandatory verbatim disclosure */}
+            <div className="p-4 rounded-xl bg-[#111827] border-l-4 border-emerald-500 text-[#E5E7EB] text-xs leading-relaxed space-y-2">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-emerald-400 font-bold block">
+                Official Patent Relationship Statement
+              </span>
+              <p className="italic">
+                &ldquo;SignalEdge OS adapts related principles of source-authority assessment, information-freshness validation and evidence relationships to investment research. These principles are relevant to the separately filed VERIFY-FIRST Adaptive Learning Path Generation System with Authority and Freshness Validation. The original invention concerns adaptive learning paths; this project applies related principles to financial claims, company analysis and research-thesis monitoring. The existing patent application is not represented as a granted patent or as automatically covering SignalEdge OS.&rdquo;
+              </p>
+            </div>
+
+            {/* Metadata Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div className="p-3.5 rounded-xl bg-[#161F30]/60 border border-[#1F293D] space-y-1.5">
+                <span className="text-[10px] font-mono text-[#9CA3AF] uppercase">Academic Institution</span>
+                <p className="text-sm font-semibold text-white">Bannari Amman Institute of Technology</p>
+                <p className="text-xs text-[#9CA3AF]">Department of Artificial Intelligence and Data Science</p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-[#161F30]/60 border border-[#1F293D] space-y-1.5">
+                <span className="text-[10px] font-mono text-[#9CA3AF] uppercase">Filed Patent Application</span>
+                <p className="text-sm font-semibold text-emerald-400">Application No: 202641118456</p>
+                <p className="text-xs text-[#9CA3AF]">
+                  Status: Filed Patent Application (Indian Patent Office &mdash; Not Granted)
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-[#161F30]/60 border border-[#1F293D] space-y-1.5">
+                <span className="text-[10px] font-mono text-[#9CA3AF] uppercase">Original Patent Title</span>
+                <p className="text-xs font-medium text-[#E5E7EB]">
+                  &ldquo;VERIFY-FIRST Adaptive Learning Path Generation System with Authority and Freshness Validation&rdquo;
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-[#161F30]/60 border border-[#1F293D] space-y-1.5">
+                <span className="text-[10px] font-mono text-[#9CA3AF] uppercase">Project Application Domain</span>
+                <p className="text-sm font-semibold text-white">SignalEdge OS</p>
+                <p className="text-xs text-[#9CA3AF]">
+                  AI-Powered Investment Opportunity Discovery Platform (Indian Public Equity)
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Technical Mapping Matrix */}
+          <Card variant="elevated" className="space-y-3">
+            <CardHeader>
+              <CardTitle>Technical Principle Adaptation Matrix</CardTitle>
+              <CardDescription>
+                How core architectural concepts from the patent application map directly to SignalEdge OS
+              </CardDescription>
+            </CardHeader>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border border-[#1F293D] rounded-xl overflow-hidden">
+                <thead className="bg-[#111827] text-[#9CA3AF] font-mono uppercase text-[10px]">
+                  <tr>
+                    <th className="p-3 border-b border-[#1F293D]">Technical Principle</th>
+                    <th className="p-3 border-b border-[#1F293D]">Original Patent Application (Learning Paths)</th>
+                    <th className="p-3 border-b border-[#1F293D] text-emerald-400">SignalEdge OS Adaptation (Equities)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#1F293D] text-[#E5E7EB]">
+                  <tr className="hover:bg-[#161F30]/40">
+                    <td className="p-3 font-semibold text-white">Source Authority Scoring</td>
+                    <td className="p-3 text-[#9CA3AF]">Accredited university syllabi vs. blog tutorials (Tier 1 to 4)</td>
+                    <td className="p-3 text-emerald-300">Statutory BSE/NSE filings & SEBI disclosures (Tier 1: 1.0) vs. unverified forum rumors (Tier 4: 0.15)</td>
+                  </tr>
+                  <tr className="hover:bg-[#161F30]/40">
+                    <td className="p-3 font-semibold text-white">Temporal Freshness Validation</td>
+                    <td className="p-3 text-[#9CA3AF]">Curriculum obsolescence half-life and software framework versions</td>
+                    <td className="p-3 text-emerald-300">Category-specific expiry (Quarterly earnings: 105d, Annual audited: 425d, Market orders: 24h)</td>
+                  </tr>
+                  <tr className="hover:bg-[#161F30]/40">
+                    <td className="p-3 font-semibold text-white">Direct Evidential Grounding</td>
+                    <td className="p-3 text-[#9CA3AF]">Concept definition requires direct excerpt from peer-reviewed textbook</td>
+                    <td className="p-3 text-emerald-300">Pre-Buy Gate & Thesis assertions require exact filing excerpts; missing data yields UNKNOWN / INVESTIGATE</td>
+                  </tr>
+                  <tr className="hover:bg-[#161F30]/40">
+                    <td className="p-3 font-semibold text-white">Contradiction & Degrade Trigger</td>
+                    <td className="p-3 text-[#9CA3AF]">New syllabus deprecating concept forces node invalidation and review</td>
+                    <td className="p-3 text-emerald-300">Conflicting audited numbers or rating downgrades trigger thesis audit status NEEDS_REVIEW</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Card>
+        </div>
+      )}
+
+      {/* TAB 4: Danger Zone */}
       {activeTab === 'DANGER' && (
         <Card variant="elevated" className="border-rose-500/30 space-y-4">
           <CardHeader>

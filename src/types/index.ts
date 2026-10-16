@@ -433,6 +433,9 @@ export interface PreBuyLayerScore {
   explanation: string;
   source: string;
   risk_if_failed: string;
+  evidence_status?: VerificationStatus;
+  evidence_source?: string;
+  evidence_claim_id?: string;
 }
 
 export interface FraudChecklistItem {
@@ -1235,5 +1238,110 @@ export interface NewsFeedResult {
   primary_source: string;
   articles: NewsArticle[];
 }
+
+// ==========================================
+// VERIFY-FIRST EVIDENCE ENGINE DATA CONTRACTS
+// ==========================================
+
+export type VerificationStatus =
+  | 'VERIFIED'
+  | 'PARTIALLY_VERIFIED'
+  | 'UNVERIFIED'
+  | 'STALE'
+  | 'CONFLICTING'
+  | 'DATA_UNAVAILABLE';
+
+export type ClaimCategory =
+  | 'FINANCIAL_METRIC'
+  | 'CATALYST_EVENT'
+  | 'GOVERNANCE_AND_PROMOTER'
+  | 'VALUATION_MULTIPLE'
+  | 'REGULATORY_POLICY'
+  | 'SUPPLY_CHAIN_DEPENDENCY'
+  | 'MANAGEMENT_GUIDANCE';
+
+export type InformationTemporalType =
+  | 'REALTIME_PRICE'
+  | 'MARKET_EVENT'
+  | 'QUARTERLY_DISCLOSURE'
+  | 'ANNUAL_AUDIT'
+  | 'HISTORICAL_FACT';
+
+export interface ConflictingEvidenceDetail {
+  conflict_id: string;
+  source_name: string;
+  source_tier: SourceQualityTier;
+  source_url?: string;
+  published_at?: string;
+  excerpt: string;
+  opposing_statement: string;
+  disagreement_nature: string;
+  severity: 'CRITICAL' | 'MODERATE' | 'LOW';
+}
+
+export interface VerifyFirstClaim {
+  claim_id: string;
+  claim_text: string;
+  company_symbol: string;
+  company_name: string;
+  category: ClaimCategory;
+  temporal_type: InformationTemporalType;
+  source_name: string;
+  source_url?: string;
+  source_category: string;
+  source_tier: SourceQualityTier;
+  source_authority_score: number; // 0.0 to 1.0
+  is_syndicated_derivative?: boolean;
+  original_attribution?: string;
+  published_at: string | null;
+  retrieved_at: string;
+  evidence_excerpt: string;
+  document_name?: string;
+  document_section?: string;
+  document_page?: number;
+  verification_status: VerificationStatus;
+  freshness_status: FreshnessStatus;
+  freshness_explanation: string;
+  support_level: 'DIRECT_SUPPORT' | 'PARTIAL_SUPPORT' | 'UNSUPPORTED' | 'CONTRADICTED';
+  conflicting_evidence?: ConflictingEvidenceDetail[];
+  explanation: string;
+  limitations: string;
+  dependent_thesis_ids?: string[];
+  dependent_gate_layers?: string[];
+  provenance: DataProvenance;
+  provenance_label: string;
+}
+
+export interface VerifyFirstAuditSummary {
+  total_claims: number;
+  verified_count: number;
+  partially_verified_count: number;
+  unverified_count: number;
+  stale_count: number;
+  conflicting_count: number;
+  data_unavailable_count: number;
+  tier1_official_count: number;
+  tier2_media_count: number;
+  tier3_industry_count: number;
+  tier4_unverified_count: number;
+  overall_verification_rate_pct: number;
+  claims: VerifyFirstClaim[];
+  disclaimer: string;
+  patent_connection_notice: string;
+}
+
+export interface ThesisAuditResult {
+  thesis_id: string;
+  primary_symbol: string;
+  overall_status: 'HEALTHY' | 'NEEDS_REVIEW' | 'CRITICAL_CONCERNS';
+  claims_audited_count: number;
+  verified_claims_count: number;
+  stale_claims_count: number;
+  conflicting_claims_count: number;
+  unverified_claims_count: number;
+  action_required: string;
+  audit_timestamp: string;
+}
+
 
 

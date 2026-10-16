@@ -19,6 +19,24 @@
       "primary_goal": "DISCOVERY",
       "onboarding_completed": true,
       "created_at": "2026-01-15T09:00:00+05:30"
+    },
+    {
+      "user_id": "usr-1792042077078-d4e87830",
+      "email": "harishkumar@signaledge.in",
+      "password_hash": "45b1c4e610d4168292ed2018d214d94cdcae499af219f551ebf2adc60e870f8aa2c388de4f4f493825dddcd27c8ec8322efa78b52149a2ff8f4990decff52588",
+      "password_salt": "7abb06b0665647a259eab1dbbceb1242",
+      "display_name": "Harishkumar M",
+      "role": "RETAIL_INVESTOR",
+      "investment_horizon": "3-7YR",
+      "risk_tolerance": "MODERATE",
+      "portfolio_size_range": "10L-50L",
+      "sectors_of_interest": [
+        "Automotive",
+        "Renewable Energy"
+      ],
+      "primary_goal": "DISCOVERY",
+      "onboarding_completed": false,
+      "created_at": "2026-10-15T05:27:57.078Z"
     }
   ],
   "sessions": [
@@ -275,28 +293,64 @@
       "expires_at": "2026-11-07T13:02:51.473Z"
     },
     {
-      "token": "tok_53c8ee2685fad9d5eb0e7f5589c5eefc3ed488fdb453d7e122b10c18a2f24dea",
-      "user_id": "usr-default-01",
-      "created_at": "2026-10-08T16:25:04.462Z",
-      "expires_at": "2026-11-07T16:25:04.462Z"
+      "token": "tok_4eb5fe87aa1a68fe7945c523831ae241cefd5017ab7536d3ceee84747feb5f3b",
+      "user_id": "usr-1792042077078-d4e87830",
+      "created_at": "2026-10-15T05:27:57.085Z",
+      "expires_at": "2026-11-14T05:27:57.085Z"
     },
     {
-      "token": "tok_bdd42da13e4f22173f08cb515695e43af9364b3481ab9d69258ece0a9cf81776",
-      "user_id": "usr-default-01",
-      "created_at": "2026-10-08T19:11:38.695Z",
-      "expires_at": "2026-11-07T19:11:38.695Z"
+      "token": "tok_dd5e278f5b85dc5e8b6c699b720649f29a5c517d323e9b71543c22ad8869c2ed",
+      "user_id": "usr-1792042077078-d4e87830",
+      "created_at": "2026-10-15T05:28:26.567Z",
+      "expires_at": "2026-11-14T05:28:26.567Z"
     },
     {
-      "token": "tok_d1bf8f6258477d0b83253ef088711bef67c84f2db406c589e93a9c80f0951ea2",
-      "user_id": "usr-default-01",
-      "created_at": "2026-10-08T19:47:45.459Z",
-      "expires_at": "2026-11-07T19:47:45.459Z"
+      "token": "tok_95382914c3fedfd117aa55fa1b332bb8a5c0c038a054ff41050a6a09109bed1d",
+      "user_id": "usr-1792042077078-d4e87830",
+      "created_at": "2026-10-15T05:30:01.752Z",
+      "expires_at": "2026-11-14T05:30:01.752Z"
     },
     {
-      "token": "tok_46c0cbd0741d4af6df31cebd74721e88a260c7b8e77802cb22bb0c8030d6b216",
+      "token": "tok_6009f8cc4f2fe2b0fbc0ad75dca1611f848731748dbb30642e918358ba238141",
+      "user_id": "usr-1792042077078-d4e87830",
+      "created_at": "2026-10-15T05:52:23.262Z",
+      "expires_at": "2026-11-14T05:52:23.262Z"
+    },
+    {
+      "token": "tok_6aada2a0785f1c073df0e3ce7540681da0ffcf33e9b11b1c5f9065e093f7440e",
       "user_id": "usr-default-01",
-      "created_at": "2026-10-08T19:54:15.803Z",
-      "expires_at": "2026-11-07T19:54:15.803Z"
+      "created_at": "2026-10-16T01:49:16.509Z",
+      "expires_at": "2026-11-15T01:49:16.509Z"
+    },
+    {
+      "token": "tok_6de5c4e708765dbc35d529fdbd661076accbf43872f15e4f0b704278ca0025a7",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T02:03:30.690Z",
+      "expires_at": "2026-11-15T02:03:30.690Z"
+    },
+    {
+      "token": "tok_c7e42e0cc08dd844298ee96d22c186eb4e28598047cac92fc1c3c29abf8c2867",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T04:19:08.461Z",
+      "expires_at": "2026-11-15T04:19:08.461Z"
+    },
+    {
+      "token": "tok_baf9dbf19c6a119705e05835222a266bc06edc4e0df71f266a05980e146cbc47",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T04:20:39.351Z",
+      "expires_at": "2026-11-15T04:20:39.351Z"
+    },
+    {
+      "token": "tok_58428f33c6c9824609b7205ca0bf1470ea2bfdde2cd901c7934937b996f58f28",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T04:21:07.870Z",
+      "expires_at": "2026-11-15T04:21:07.870Z"
+    },
+    {
+      "token": "tok_c45516e4fbad194064c10fb0af214ebd36244ccd92d2db5a1dfeb3acbcbd8638",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T04:29:18.659Z",
+      "expires_at": "2026-11-15T04:29:18.659Z"
     }
   ],
   "companies": [
@@ -327,7 +381,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Demerger value unlocking into standalone CV and PV entities + JLR net cash transition.",
       "business_summary": "Pioneer in Indian commercial vehicles and market leader in domestic passenger electric vehicles (EVs). JLR generating historic cash flows.",
-      "data_last_updated": "2026-10-08T14:44:23.974Z",
+      "data_last_updated": "2026-10-15T05:20:12.075Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -339,8 +393,8 @@
       "sector": "Automotive",
       "industry": "Passenger Cars & SUVs",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 11228,
-      "price_change_pct": -1.39,
+      "current_price": 11478,
+      "price_change_pct": 0.51,
       "market_cap": 391500,
       "pe_ratio": 28.6,
       "pb_ratio": 4.6,
@@ -357,7 +411,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Hybrid powertrain capacity expansion + eVX global EV export rollout from Gujarat plant.",
       "business_summary": "Dominant domestic passenger car manufacturer holding >41% market share with ₹50,000+ Cr cash reserves.",
-      "data_last_updated": "2026-10-08T14:44:23.973Z",
+      "data_last_updated": "2026-10-15T05:20:12.003Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -369,8 +423,8 @@
       "sector": "Automotive",
       "industry": "SUVs & Farm Equipment",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 2751.2,
-      "price_change_pct": -3.8,
+      "current_price": 2861.8,
+      "price_change_pct": 2.35,
       "market_cap": 353000,
       "pe_ratio": 31.2,
       "pb_ratio": 5.4,
@@ -387,7 +441,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Born Electric EV portfolio launch + sustained premium SUV order backlogs (Scorpio-N, XUV700).",
       "business_summary": "Leader in Indian utility vehicles and world’s largest tractor manufacturer by volume with high capital allocation discipline.",
-      "data_last_updated": "2026-10-08T14:44:24.062Z",
+      "data_last_updated": "2026-10-15T05:20:12.000Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -399,8 +453,8 @@
       "sector": "Automotive",
       "industry": "2-Wheelers & 3-Wheelers",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 9637,
-      "price_change_pct": -4.06,
+      "current_price": 10378,
+      "price_change_pct": 6.14,
       "market_cap": 258000,
       "pe_ratio": 32.4,
       "pb_ratio": 8.2,
@@ -417,7 +471,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Chetak EV scale-up + Triumph 400cc global exports acceleration.",
       "business_summary": "World’s most profitable 2-wheeler and 3-wheeler manufacturer with dominant market presence across 70+ export markets.",
-      "data_last_updated": "2026-10-08T14:44:24.130Z",
+      "data_last_updated": "2026-10-15T05:20:12.010Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -429,8 +483,8 @@
       "sector": "Energy & Conglomerate",
       "industry": "Oil to Chemicals, Telecom & Retail",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1178,
-      "price_change_pct": 0.88,
+      "current_price": 1205.7,
+      "price_change_pct": 3.02,
       "market_cap": 2015000,
       "pe_ratio": 27.8,
       "pb_ratio": 2.6,
@@ -447,7 +501,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Jio 5G monetization + Retail margin expansion + Jamnagar Green Energy Giga-factories commissioning.",
       "business_summary": "India’s largest private enterprise spanning world-class refining/petrochemicals, digital telecom (Jio 470M+ subscribers), and nationwide retail.",
-      "data_last_updated": "2026-10-08T14:44:23.998Z",
+      "data_last_updated": "2026-10-15T05:20:12.019Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -459,8 +513,8 @@
       "sector": "Energy",
       "industry": "Upstream Oil & Gas Exploration",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 219.8,
-      "price_change_pct": -1.16,
+      "current_price": 225,
+      "price_change_pct": 1.69,
       "market_cap": 371000,
       "pe_ratio": 8.2,
       "pb_ratio": 1.1,
@@ -477,7 +531,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "KG-DWN-98/2 deepwater block production ramp-up + sustained $75+ net crude realization.",
       "business_summary": "Largest sovereign crude oil and natural gas exploration PSU contributing ~71% of domestic crude production.",
-      "data_last_updated": "2026-10-08T14:44:24.045Z",
+      "data_last_updated": "2026-10-15T05:20:12.012Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -489,8 +543,8 @@
       "sector": "Mining & Energy",
       "industry": "Thermal Coal Mining",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 409.35,
-      "price_change_pct": -2.63,
+      "current_price": 418.4,
+      "price_change_pct": 1.66,
       "market_cap": 286500,
       "pe_ratio": 8.8,
       "pb_ratio": 3.2,
@@ -507,7 +561,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "1 Billion Tonne production trajectory + premium e-auction realization premiums.",
       "business_summary": "World’s largest coal producer meeting 80%+ of India’s thermal power fuel requirements with massive free cash flow yields.",
-      "data_last_updated": "2026-10-08T14:44:23.970Z",
+      "data_last_updated": "2026-10-15T05:20:11.993Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -519,8 +573,8 @@
       "sector": "Information Technology",
       "industry": "IT Services & Enterprise Consulting",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 2076,
-      "price_change_pct": 0.05,
+      "current_price": 2373.1,
+      "price_change_pct": 10.07,
       "market_cap": 1490000,
       "pe_ratio": 31.4,
       "pb_ratio": 13.8,
@@ -537,7 +591,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Record $10B+ quarterly order intake (TCV) driven by large enterprise cloud and AI modernization.",
       "business_summary": "Flagship Tata IT services enterprise with industry-leading 24%+ operating margins and 100% free cash flow conversion.",
-      "data_last_updated": "2026-10-08T14:44:24.039Z",
+      "data_last_updated": "2026-10-15T05:20:11.959Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -549,8 +603,8 @@
       "sector": "Information Technology",
       "industry": "IT Services & Consulting",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 997,
-      "price_change_pct": -3.67,
+      "current_price": 1116.9,
+      "price_change_pct": 9.14,
       "market_cap": 755000,
       "pe_ratio": 28.4,
       "pb_ratio": 8.7,
@@ -567,7 +621,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Generative AI enterprise Topaz rollout + large deal TCV momentum.",
       "business_summary": "Second-largest Indian IT exporter with industry-leading free cash conversion and expanding Cloud/AI ecosystem.",
-      "data_last_updated": "2026-10-08T14:44:24.270Z",
+      "data_last_updated": "2026-10-15T05:20:12.021Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -579,8 +633,8 @@
       "sector": "Information Technology",
       "industry": "IT Services & Software Products",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1176.9,
-      "price_change_pct": -5.33,
+      "current_price": 1373.9,
+      "price_change_pct": 12.92,
       "market_cap": 483000,
       "pe_ratio": 29.8,
       "pb_ratio": 7.2,
@@ -597,7 +651,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Engineering R&D services leadership + recurring revenue from HCL Software unit.",
       "business_summary": "Leader in digital engineering and hybrid cloud infrastructure management with consistent double-digit payout yields.",
-      "data_last_updated": "2026-10-08T14:44:24.007Z",
+      "data_last_updated": "2026-10-15T05:20:12.018Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -609,8 +663,8 @@
       "sector": "Information Technology",
       "industry": "IT Services & Digital Solutions",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 158.38,
-      "price_change_pct": -0.61,
+      "current_price": 174.03,
+      "price_change_pct": 7.05,
       "market_cap": 285000,
       "pe_ratio": 24.6,
       "pb_ratio": 3.8,
@@ -627,7 +681,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Turnaround strategy under new executive leadership focusing on Capco consulting synergies.",
       "business_summary": "Global information technology and business process services company undergoing operational restructuring.",
-      "data_last_updated": "2026-10-08T14:44:24.286Z",
+      "data_last_updated": "2026-10-15T05:20:12.090Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -639,8 +693,8 @@
       "sector": "Information Technology",
       "industry": "Digital Engineering & Cloud",
       "market_cap_category": "MID_CAP",
-      "current_price": 5468,
-      "price_change_pct": 1.88,
+      "current_price": 5835,
+      "price_change_pct": 1.13,
       "market_cap": 86500,
       "pe_ratio": 54.2,
       "pb_ratio": 14.2,
@@ -657,7 +711,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Consistent 4%+ sequential USD revenue growth driven by BFSI & Healthcare cloud modernization.",
       "business_summary": "High-growth mid-tier digital engineering leader partnering closely with Salesforce, AWS, and Microsoft Azure.",
-      "data_last_updated": "2026-10-08T14:44:24.463Z",
+      "data_last_updated": "2026-10-15T05:20:12.096Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -669,8 +723,8 @@
       "sector": "Banking & Financials",
       "industry": "Private Commercial Banking",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 692.25,
-      "price_change_pct": -4.01,
+      "current_price": 721.2,
+      "price_change_pct": 1.97,
       "market_cap": 1308000,
       "pe_ratio": 18.6,
       "pb_ratio": 2.7,
@@ -687,7 +741,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Post-merger loan-to-deposit ratio (LDR) normalization + retail branch deposit mobilization.",
       "business_summary": "India’s largest private sector bank with industry-leading asset quality (GNPA < 1.3%) and massive distribution franchise.",
-      "data_last_updated": "2026-10-08T14:44:24.003Z",
+      "data_last_updated": "2026-10-15T05:20:11.963Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -699,8 +753,8 @@
       "sector": "Banking & Financials",
       "industry": "Private Commercial Banking",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1349,
-      "price_change_pct": 2.93,
+      "current_price": 1365.4,
+      "price_change_pct": 0.77,
       "market_cap": 902000,
       "pe_ratio": 17.4,
       "pb_ratio": 3.1,
@@ -717,7 +771,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Industry-best Return on Assets (RoA > 2.3%) + digital iMobile ecosystem compounding.",
       "business_summary": "Top-tier private bank delivering consistent 18%+ RoE backed by high-yielding retail advances and pristine corporate book.",
-      "data_last_updated": "2026-10-08T14:44:24.267Z",
+      "data_last_updated": "2026-10-15T05:20:12.110Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -729,8 +783,8 @@
       "sector": "Banking & Financials",
       "industry": "Public Sector Banking",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 940,
-      "price_change_pct": -1.48,
+      "current_price": 957,
+      "price_change_pct": -0.22,
       "market_cap": 727000,
       "pe_ratio": 10.4,
       "pb_ratio": 1.4,
@@ -747,7 +801,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "YONO digital credit sanctions + corporate loan book expansion under national infrastructure capex.",
       "business_summary": "Nation’s largest banking conglomerate commanding ~23% domestic credit and deposit market share.",
-      "data_last_updated": "2026-10-08T14:44:23.963Z",
+      "data_last_updated": "2026-10-15T05:20:12.079Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -759,8 +813,8 @@
       "sector": "Banking & Financials",
       "industry": "Consumer & Commercial NBFC",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 955.95,
-      "price_change_pct": 0.81,
+      "current_price": 963,
+      "price_change_pct": 0.31,
       "market_cap": 440000,
       "pe_ratio": 28.2,
       "pb_ratio": 5.6,
@@ -777,7 +831,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Omnichannel digital payments + gold loan and commercial MSME diversification.",
       "business_summary": "India’s largest non-banking financial institution with 85M+ customer base and superior risk-pricing underwriting models.",
-      "data_last_updated": "2026-10-08T14:44:24.065Z",
+      "data_last_updated": "2026-10-15T05:20:11.985Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -789,8 +843,8 @@
       "sector": "Defense & Aerospace",
       "industry": "Aerospace & Defense Equipment",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 4647.4,
-      "price_change_pct": 1.01,
+      "current_price": 4937,
+      "price_change_pct": 6.04,
       "market_cap": 288400,
       "pe_ratio": 34.2,
       "pb_ratio": 8.9,
@@ -807,7 +861,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "₹1.2 Lakh Cr order book driven by Tejas Mk1A and GE-414 engine co-production.",
       "business_summary": "Monopoly Indian aerospace defense PSU with pristine zero-debt balance sheet and multi-decade sovereign order pipeline.",
-      "data_last_updated": "2026-10-08T14:44:23.958Z",
+      "data_last_updated": "2026-10-15T05:20:12.018Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -819,8 +873,8 @@
       "sector": "Defense & Aerospace",
       "industry": "Defense Radars, Avionics & Electronic Warfare",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 367.3,
-      "price_change_pct": -4.12,
+      "current_price": 381.35,
+      "price_change_pct": 3.59,
       "market_cap": 217800,
       "pe_ratio": 44.8,
       "pb_ratio": 12.4,
@@ -837,7 +891,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "MoD Quick Reaction Surface to Air Missile (QRSAM) order intake + civil electronics export scaling.",
       "business_summary": "Premier sovereign defense electronics enterprise with zero long-term debt, 22%+ operating margins, and unmatched R&D integration.",
-      "data_last_updated": "2026-10-08T14:44:24.265Z",
+      "data_last_updated": "2026-10-15T05:20:12.020Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -849,8 +903,8 @@
       "sector": "Capital Goods & Infrastructure",
       "industry": "Engineering, Procurement & Construction",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 3625.1,
-      "price_change_pct": -1.85,
+      "current_price": 3656.4,
+      "price_change_pct": -1.27,
       "market_cap": 492000,
       "pe_ratio": 31.8,
       "pb_ratio": 5.1,
@@ -867,7 +921,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Middle East hydrocarbon and green hydrogen mega EPC contract expansion.",
       "business_summary": "National infrastructure conglomerate with an order book exceeding ₹4.75 Lakh Crore spanning energy, defense, and high-speed rail.",
-      "data_last_updated": "2026-10-08T14:44:24.261Z",
+      "data_last_updated": "2026-10-15T05:20:12.307Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -879,8 +933,8 @@
       "sector": "Capital Goods & Infrastructure",
       "industry": "Heavy Power Generation & Transmission",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 429.6,
-      "price_change_pct": 2.04,
+      "current_price": 443.35,
+      "price_change_pct": 2.25,
       "market_cap": 99200,
       "pe_ratio": 88,
       "pb_ratio": 3.8,
@@ -897,7 +951,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Government revival of 80 GW thermal power additions + Vande Bharat trainset manufacturing.",
       "business_summary": "India’s largest engineering and manufacturing enterprise in the energy and infrastructure sectors.",
-      "data_last_updated": "2026-10-08T14:44:23.979Z",
+      "data_last_updated": "2026-10-15T05:20:12.005Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -909,8 +963,8 @@
       "sector": "Renewable Energy",
       "industry": "Wind Turbine Generators & EPC",
       "market_cap_category": "MID_CAP",
-      "current_price": 36.43,
-      "price_change_pct": -6.37,
+      "current_price": 41.27,
+      "price_change_pct": 9.76,
       "market_cap": 93200,
       "pe_ratio": 42.1,
       "pb_ratio": 8.4,
@@ -927,7 +981,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "3.8 GW order book visibility + C&I hybrid wind-solar tender momentum.",
       "business_summary": "Completely deleveraged domestic wind market leader holding 32%+ market share with high-margin Operations & Maintenance (OMS) fleet annuity.",
-      "data_last_updated": "2026-10-08T14:44:24.268Z",
+      "data_last_updated": "2026-10-15T05:20:12.295Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -939,8 +993,8 @@
       "sector": "Renewable Energy",
       "industry": "Integrated Power & Clean Energy",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 335.65,
-      "price_change_pct": -4.14,
+      "current_price": 350.95,
+      "price_change_pct": 2.57,
       "market_cap": 138900,
       "pe_ratio": 34.6,
       "pb_ratio": 4.1,
@@ -957,7 +1011,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "4.3 GW solar cell/module manufacturing plant operationalization in Tamil Nadu + EV charging network.",
       "business_summary": "Pioneering integrated power utility leading India’s green transition with generation, transmission, distribution, and solar rooftop EPC.",
-      "data_last_updated": "2026-10-08T14:44:24.011Z",
+      "data_last_updated": "2026-10-15T05:20:12.302Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -969,8 +1023,8 @@
       "sector": "Power & Utilities",
       "industry": "Power Generation & Green Energy",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 309.7,
-      "price_change_pct": -1.71,
+      "current_price": 315.5,
+      "price_change_pct": 1.12,
       "market_cap": 383000,
       "pe_ratio": 17.8,
       "pb_ratio": 2.2,
@@ -987,7 +1041,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "NTPC Green Energy listing + nuclear & pump-storage hydro project pipeline.",
       "business_summary": "India’s largest power generation conglomerate contributing ~25% of total electricity generated across the nation.",
-      "data_last_updated": "2026-10-08T14:44:24.052Z",
+      "data_last_updated": "2026-10-15T05:20:12.002Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -999,8 +1053,8 @@
       "sector": "Power & Utilities",
       "industry": "Inter-State Electricity Transmission",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 244.65,
-      "price_change_pct": -3.89,
+      "current_price": 249.45,
+      "price_change_pct": 0.12,
       "market_cap": 302000,
       "pe_ratio": 18.2,
       "pb_ratio": 3.4,
@@ -1017,7 +1071,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "₹1.9 Lakh Cr Green Energy Corridor (GEC) transmission lines capex award wave.",
       "business_summary": "Central transmission utility wheeling ~85% of India’s inter-regional power with guaranteed regulated return on equity (15.5%).",
-      "data_last_updated": "2026-10-08T14:44:24.271Z",
+      "data_last_updated": "2026-10-15T05:20:12.008Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1029,8 +1083,8 @@
       "sector": "Specialty Chemicals",
       "industry": "Benzene Derivatives & Intermediates",
       "market_cap_category": "MID_CAP",
-      "current_price": 478.05,
-      "price_change_pct": 2.78,
+      "current_price": 491.1,
+      "price_change_pct": 6.73,
       "market_cap": 18100,
       "pe_ratio": 38.5,
       "pb_ratio": 3.2,
@@ -1047,7 +1101,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Global chemical destocking bottoming out + long-term agrochemical contracts.",
       "business_summary": "Global leader in benzene-based chemistry with downstream integration into chlorination, nitration, and hydrogenation specialty chains.",
-      "data_last_updated": "2026-10-08T14:44:24.062Z",
+      "data_last_updated": "2026-10-15T05:20:12.009Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1059,8 +1113,8 @@
       "sector": "Specialty Chemicals",
       "industry": "Phenolics & Basic Chemicals",
       "market_cap_category": "MID_CAP",
-      "current_price": 1584.1,
-      "price_change_pct": 6.12,
+      "current_price": 1633.9,
+      "price_change_pct": 0.74,
       "market_cap": 37900,
       "pe_ratio": 44.2,
       "pb_ratio": 7.8,
@@ -1077,7 +1131,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "₹14,000 Cr downstream polycarbonate and polycarbonate compounding capex MoU with Gujarat Government.",
       "business_summary": "Lowest-cost manufacturer of phenol and acetone with significant domestic import substitution moats.",
-      "data_last_updated": "2026-10-08T14:44:24.088Z",
+      "data_last_updated": "2026-10-15T05:20:12.017Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1089,8 +1143,8 @@
       "sector": "Consumer & FMCG",
       "industry": "FMCG, Cigarettes, Agri & Paperboards",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 255,
-      "price_change_pct": -0.35,
+      "current_price": 264.65,
+      "price_change_pct": -0.51,
       "market_cap": 589000,
       "pe_ratio": 28.4,
       "pb_ratio": 8.2,
@@ -1107,7 +1161,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Hotels business demerger listing + non-cigarette FMCG EBITDA margin expansion above 11%.",
       "business_summary": "Consumer powerhouse with market-leading cigarette cash generator funding rapid FMCG Foods & Personal Care brand scaling.",
-      "data_last_updated": "2026-10-08T14:44:23.969Z",
+      "data_last_updated": "2026-10-15T05:20:12.093Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1119,8 +1173,8 @@
       "sector": "Consumer & Retail",
       "industry": "Apparel & Fast Fashion Retail",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 2876.3,
-      "price_change_pct": 11.48,
+      "current_price": 2950,
+      "price_change_pct": 1.09,
       "market_cap": 243500,
       "pe_ratio": 138,
       "pb_ratio": 38.4,
@@ -1137,7 +1191,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Zudio rapid store rollouts (200+ annually) + international expansion in UAE.",
       "business_summary": "Fastest-growing value fashion retail disruptor in India with industry-defining inventory turn velocity and zero debt.",
-      "data_last_updated": "2026-10-08T14:44:24.390Z",
+      "data_last_updated": "2026-10-15T05:20:12.022Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1167,7 +1221,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Blinkit quick commerce dark store network reaching EBITDA breakeven + District going-out app spin-off.",
       "business_summary": "Duopoly food delivery operator and undisputed market leader in India’s hyper-growth quick commerce retail segment.",
-      "data_last_updated": "2026-10-08T14:44:24.234Z",
+      "data_last_updated": "2026-10-15T05:20:11.898Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1179,8 +1233,8 @@
       "sector": "Consumer & Retail",
       "industry": "Jewellery, Watches & Eyewear",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 4359.5,
-      "price_change_pct": -3.46,
+      "current_price": 4449.2,
+      "price_change_pct": 0.89,
       "market_cap": 303600,
       "pe_ratio": 84.2,
       "pb_ratio": 24.8,
@@ -1197,7 +1251,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Customs duty reduction on gold imports driving organized jewellery market share gains.",
       "business_summary": "Tanishq, Fastrack, and Mia owner commanding dominant leadership in organized Indian wedding and lifestyle retail.",
-      "data_last_updated": "2026-10-08T14:44:24.255Z",
+      "data_last_updated": "2026-10-15T05:20:11.959Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1209,8 +1263,8 @@
       "sector": "Consumer Durables",
       "industry": "Decorative & Industrial Paints",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 2311.6,
-      "price_change_pct": -3.96,
+      "current_price": 2374,
+      "price_change_pct": 1.49,
       "market_cap": 235000,
       "pe_ratio": 46.2,
       "pb_ratio": 13.8,
@@ -1227,7 +1281,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Dealer distribution network expansion defending market share against new conglomerate entrants (Birla Opus).",
       "business_summary": "India’s largest paint company holding ~50% decorative market share with proprietary tinting machine moat.",
-      "data_last_updated": "2026-10-08T14:44:24.012Z",
+      "data_last_updated": "2026-10-15T05:20:12.294Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1239,8 +1293,8 @@
       "sector": "Healthcare & Pharma",
       "industry": "Specialty Pharmaceuticals & Generics",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1759.8,
-      "price_change_pct": -2.29,
+      "current_price": 1760,
+      "price_change_pct": 0,
       "market_cap": 451000,
       "pe_ratio": 38.6,
       "pb_ratio": 6.2,
@@ -1257,7 +1311,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Global innovative specialty portfolio (Ilumya, Cequa, Winlevi) contributing >$1.2B revenue.",
       "business_summary": "India’s largest pharmaceutical enterprise with dominant domestic formulation market share and expanding US specialty pipeline.",
-      "data_last_updated": "2026-10-08T14:44:24.008Z",
+      "data_last_updated": "2026-10-15T05:20:12.297Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1269,8 +1323,8 @@
       "sector": "Healthcare & Pharma",
       "industry": "Respiratory & Formulation Generics",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1306.8,
-      "price_change_pct": -2.77,
+      "current_price": 1330.5,
+      "price_change_pct": 2.27,
       "market_cap": 124500,
       "pe_ratio": 28.4,
       "pb_ratio": 4.2,
@@ -1287,7 +1341,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "US generic respiratory launches (Lanreotide, Advair) + One-India acute/chronic prescription leadership.",
       "business_summary": "Global pharmaceutical leader in respiratory medicine and affordable critical therapies with net cash balance sheet.",
-      "data_last_updated": "2026-10-08T14:44:24.255Z",
+      "data_last_updated": "2026-10-15T05:20:12.107Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1299,8 +1353,8 @@
       "sector": "Telecommunications",
       "industry": "Wireless, Broadband & Enterprise Cloud",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1804.6,
-      "price_change_pct": 3.65,
+      "current_price": 1850,
+      "price_change_pct": 2.49,
       "market_cap": 962000,
       "pe_ratio": 48.2,
       "pb_ratio": 8.4,
@@ -1317,7 +1371,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "ARPU expansion towards ₹250 threshold + Airtel Africa and Homes broadband monetization.",
       "business_summary": "Global telecom giant operating across India and 14 African nations with premium post-paid subscriber base and digital cloud edge.",
-      "data_last_updated": "2026-10-08T14:44:24.188Z",
+      "data_last_updated": "2026-10-15T05:20:12.023Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1329,8 +1383,8 @@
       "sector": "Metals & Mining",
       "industry": "Integrated Primary Steel",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 171.96,
-      "price_change_pct": -3.39,
+      "current_price": 175.9,
+      "price_change_pct": 1.21,
       "market_cap": 189500,
       "pe_ratio": 38,
       "pb_ratio": 2.1,
@@ -1347,7 +1401,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Kalinganagar 5 MTPA phase-2 expansion + UK Port Talbot transition to green Electric Arc Furnace (EAF).",
       "business_summary": "One of the world’s most geographically diversified steel producers with captive iron ore mines in India delivering low-cost domestic hot metal.",
-      "data_last_updated": "2026-10-08T14:44:24.309Z",
+      "data_last_updated": "2026-10-15T05:20:12.087Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1359,8 +1413,8 @@
       "sector": "Financials & Railways",
       "industry": "Infrastructure & Sovereign Financing",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 74.3,
-      "price_change_pct": -3.58,
+      "current_price": 79.53,
+      "price_change_pct": 6.47,
       "market_cap": 215600,
       "pe_ratio": 32.8,
       "pb_ratio": 4.1,
@@ -1377,7 +1431,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "National Rail Plan 2030 capex borrowing requirement + zero NPA sovereign-backed loan asset portfolio.",
       "business_summary": "Dedicated market borrowing arm of the Indian Railways financing rolling stock assets and infrastructure projects.",
-      "data_last_updated": "2026-10-08T14:44:24.009Z",
+      "data_last_updated": "2026-10-15T05:20:11.997Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1389,8 +1443,8 @@
       "sector": "Public Equity (NSE/BSE)",
       "industry": "Diversified Indian Enterprise",
       "market_cap_category": "SMALL_CAP",
-      "current_price": 19.8,
-      "price_change_pct": 2.01,
+      "current_price": 19.29,
+      "price_change_pct": -3.6,
       "market_cap": 97,
       "pe_ratio": 26.4,
       "pb_ratio": 3.4,
@@ -1407,7 +1461,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Live market quote tracking active. Real-time momentum -2.71%.",
       "business_summary": "Indian listed corporation traded on National Stock Exchange (NSE: RPOWER) and Bombay Stock Exchange (BSE). Verified live feed.",
-      "data_last_updated": "2026-10-08T14:44:24.281Z",
+      "data_last_updated": "2026-10-15T05:20:11.989Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1419,8 +1473,8 @@
       "sector": "Public Equity (NSE/BSE)",
       "industry": "Diversified Indian Enterprise",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 12650,
-      "price_change_pct": -0.39,
+      "current_price": 12902,
+      "price_change_pct": 1,
       "market_cap": 63500,
       "pe_ratio": 32,
       "pb_ratio": 3.4,
@@ -1437,7 +1491,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Live market quote tracking active. Real-time momentum -6.89%.",
       "business_summary": "Indian listed corporation traded on National Stock Exchange (NSE: DIXON) and Bombay Stock Exchange (BSE). Verified live feed.",
-      "data_last_updated": "2026-10-08T14:44:24.401Z",
+      "data_last_updated": "2026-10-15T05:20:11.995Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1449,8 +1503,8 @@
       "sector": "Public Equity (NSE/BSE)",
       "industry": "Diversified Indian Enterprise",
       "market_cap_category": "SMALL_CAP",
-      "current_price": 451.15,
-      "price_change_pct": -2.94,
+      "current_price": 459.35,
+      "price_change_pct": 2.72,
       "market_cap": 2335,
       "pe_ratio": 24,
       "pb_ratio": 3.4,
@@ -1467,7 +1521,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Live market quote tracking active. Real-time momentum -4.91%.",
       "business_summary": "Indian listed corporation traded on National Stock Exchange (NSE: TEJASNET) and Bombay Stock Exchange (BSE). Verified live feed.",
-      "data_last_updated": "2026-10-08T14:44:24.303Z",
+      "data_last_updated": "2026-10-15T05:20:12.091Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1479,8 +1533,8 @@
       "sector": "Banking & Financials",
       "industry": "Private Sector Banking",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 435,
-      "price_change_pct": 3.98,
+      "current_price": 444,
+      "price_change_pct": 0.68,
       "market_cap": 354000,
       "pe_ratio": 19.8,
       "pb_ratio": 2.8,
@@ -1497,7 +1551,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "CASA ratio resilience + wealth management and subsidiary value compounding.",
       "business_summary": "Premier private lender with high capital adequacy ratio (20.5%) and best-in-class risk underwriting discipline.",
-      "data_last_updated": "2026-10-08T14:44:24.077Z",
+      "data_last_updated": "2026-10-15T05:20:12.014Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1509,8 +1563,8 @@
       "sector": "Banking & Financials",
       "industry": "Private Sector Banking",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1245,
-      "price_change_pct": 2.29,
+      "current_price": 1291,
+      "price_change_pct": 2.53,
       "market_cap": 352000,
       "pe_ratio": 13.2,
       "pb_ratio": 2.1,
@@ -1527,7 +1581,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Citibank consumer banking integration synergies + credit card and retail loan market share gains.",
       "business_summary": "Third largest private sector bank in India with strong domestic footprint across corporate, SME, and retail banking.",
-      "data_last_updated": "2026-10-08T14:44:24.283Z",
+      "data_last_updated": "2026-10-15T05:20:12.099Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1539,8 +1593,8 @@
       "sector": "Consumer & FMCG",
       "industry": "Household, Personal Care & Foods",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1844.5,
-      "price_change_pct": 0.46,
+      "current_price": 1907.2,
+      "price_change_pct": 2.72,
       "market_cap": 559000,
       "pe_ratio": 54.2,
       "pb_ratio": 11.4,
@@ -1557,7 +1611,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Rural FMCG volume recovery + premium beauty and well-being segment expansion.",
       "business_summary": "India’s largest FMCG enterprise touching 9 out of 10 households with iconic brands including Surf Excel, Dove, and Horlicks.",
-      "data_last_updated": "2026-10-08T14:44:24.362Z",
+      "data_last_updated": "2026-10-15T05:20:12.091Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1569,8 +1623,8 @@
       "sector": "Materials & Infrastructure",
       "industry": "Grey Cement, RMC & Building Products",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 10426,
-      "price_change_pct": -2.65,
+      "current_price": 10800,
+      "price_change_pct": 1.17,
       "market_cap": 323000,
       "pe_ratio": 44.6,
       "pb_ratio": 5.2,
@@ -1587,7 +1641,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Capacity scaling toward 200 MTPA via brownfield expansions and Kesoram asset acquisition.",
       "business_summary": "India’s largest cement manufacturer holding >23% national market share with low power/fuel cost intensity.",
-      "data_last_updated": "2026-10-08T14:44:24.544Z",
+      "data_last_updated": "2026-10-15T05:20:12.113Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1599,8 +1653,8 @@
       "sector": "Metals & Mining",
       "industry": "Primary & Value-Added Flat Steel",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1175.2,
-      "price_change_pct": -4.69,
+      "current_price": 1188.8,
+      "price_change_pct": 1.78,
       "market_cap": 239800,
       "pe_ratio": 28.4,
       "pb_ratio": 3.1,
@@ -1617,7 +1671,7 @@
       "prebuy_verdict": "INVESTIGATE",
       "key_catalyst": "Vijayanagar and Jharsuguda crude steel capacity expansion reaching 38.5 MTPA.",
       "business_summary": "Leading Indian integrated steel manufacturer with high share of value-added coated steel and automotive grades.",
-      "data_last_updated": "2026-10-08T14:44:24.013Z",
+      "data_last_updated": "2026-10-15T05:20:12.089Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1629,8 +1683,8 @@
       "sector": "Metals & Mining",
       "industry": "Aluminum & Copper Smelting",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 890.15,
-      "price_change_pct": -5.49,
+      "current_price": 887.45,
+      "price_change_pct": -1.43,
       "market_cap": 149400,
       "pe_ratio": 14.8,
       "pb_ratio": 1.6,
@@ -1647,7 +1701,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Novelis Bay Minette beverage can recycling rolling mill commissioning + domestic EV battery foil expansion.",
       "business_summary": "Global non-ferrous aluminum and copper powerhouse with integrated low-cost upstream smelters in India and Novelis downstream recycling leadership.",
-      "data_last_updated": "2026-10-08T14:44:24.212Z",
+      "data_last_updated": "2026-10-15T05:20:11.985Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1659,8 +1713,8 @@
       "sector": "Automotive",
       "industry": "Premium Mid-Size Motorcycles (Royal Enfield) & VECV",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 6767.5,
-      "price_change_pct": -2.2,
+      "current_price": 7195.5,
+      "price_change_pct": 2.06,
       "market_cap": 134800,
       "pe_ratio": 31.2,
       "pb_ratio": 7.2,
@@ -1677,7 +1731,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Himalayan 450 global ramp-up + electric motorcycle platform (Flying Flea) reveal.",
       "business_summary": "Monopoly leader in Indian 250cc-750cc premium motorcycles with unmatched operating margins (27%+) and pristine net cash fortress.",
-      "data_last_updated": "2026-10-08T14:44:24.280Z",
+      "data_last_updated": "2026-10-15T05:20:11.966Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1689,8 +1743,8 @@
       "sector": "Healthcare & Pharma",
       "industry": "Complex Generics & Biosimilars",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1180,
-      "price_change_pct": -2.17,
+      "current_price": 1230.7,
+      "price_change_pct": 2.82,
       "market_cap": 106800,
       "pe_ratio": 18.9,
       "pb_ratio": 3.4,
@@ -1707,7 +1761,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Global biosimilar commercialization (Semaglutide, Rituximab) + OTC consumer healthcare expansion.",
       "business_summary": "Premier Indian pharmaceutical innovator with robust presence in US generics, emerging markets, and specialized API synthesis.",
-      "data_last_updated": "2026-10-08T14:44:24.288Z",
+      "data_last_updated": "2026-10-15T05:20:12.118Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1719,8 +1773,8 @@
       "sector": "Specialty Chemicals",
       "industry": "Consumer Adhesives, Sealants & Construction Chemicals",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 1460.1,
-      "price_change_pct": -0.27,
+      "current_price": 1511.9,
+      "price_change_pct": 2.02,
       "market_cap": 154600,
       "pe_ratio": 78.4,
       "pb_ratio": 16.8,
@@ -1737,7 +1791,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Fevicol brand dominance + Dr. Fixit construction chemical waterproofing penetration in tier-2/3 cities.",
       "business_summary": "India’s undisputed adhesive and sealants monopoly commanding >70% organized market share with deep carpenter community distribution moats.",
-      "data_last_updated": "2026-10-08T14:44:24.570Z",
+      "data_last_updated": "2026-10-15T05:20:12.111Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1749,8 +1803,8 @@
       "sector": "Capital Goods & Electricals",
       "industry": "Wires, Cables & Fast Moving Electrical Goods (FMEG)",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 8151,
-      "price_change_pct": 2.02,
+      "current_price": 8351,
+      "price_change_pct": 1.16,
       "market_cap": 96400,
       "pe_ratio": 51.2,
       "pb_ratio": 11.6,
@@ -1767,7 +1821,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Project Leap: scaling institutional cables export to US/Europe + institutional solar and HV transmission demand.",
       "business_summary": "Market leader in Indian wires and cables commanding ~25% organized market share with industry-best operating cash conversion.",
-      "data_last_updated": "2026-10-08T14:44:24.283Z",
+      "data_last_updated": "2026-10-15T05:20:12.375Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1779,8 +1833,8 @@
       "sector": "Capital Goods & Infrastructure",
       "industry": "Industrial Automation, Smart Infrastructure & Energy",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 3639,
-      "price_change_pct": -4.34,
+      "current_price": 3696.1,
+      "price_change_pct": 2.81,
       "market_cap": 266400,
       "pe_ratio": 94,
       "pb_ratio": 18.2,
@@ -1797,7 +1851,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Demerger of energy business into standalone listed entity + Indian Railways 9000 HP electric locomotive manufacturing.",
       "business_summary": "Premier technology powerhouse driving smart manufacturing, grid decarbonization, and rail electrification across India.",
-      "data_last_updated": "2026-10-08T14:44:24.059Z",
+      "data_last_updated": "2026-10-15T05:20:12.106Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1809,8 +1863,8 @@
       "sector": "Tourism & Consumer Services",
       "industry": "Online Ticketing, Catering & Rail Neer",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 449.85,
-      "price_change_pct": -0.94,
+      "current_price": 474.15,
+      "price_change_pct": 3.35,
       "market_cap": 71200,
       "pe_ratio": 56.4,
       "pb_ratio": 18.6,
@@ -1827,7 +1881,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "Vande Bharat catering contracts + non-rail tourism and state-of-the-art packaged water plant additions.",
       "business_summary": "Monopoly sovereign provider of online passenger reservation services for Indian Railways with asset-light cash generation model.",
-      "data_last_updated": "2026-10-08T14:44:24.274Z",
+      "data_last_updated": "2026-10-15T05:20:11.992Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1839,8 +1893,8 @@
       "sector": "Consumer & Retail",
       "industry": "Value Hypermarket & Grocery Retail",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 3585,
-      "price_change_pct": -5.98,
+      "current_price": 3395,
+      "price_change_pct": -3.46,
       "market_cap": 257000,
       "pe_ratio": 98.4,
       "pb_ratio": 13.8,
@@ -1857,7 +1911,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "50+ new store additions per annum + DMart Ready e-commerce cluster expansion in tier-1 metros.",
       "business_summary": "India’s most profitable grocery retail chain operating on low-cost, store-ownership model delivering everyday low prices.",
-      "data_last_updated": "2026-10-08T14:44:24.517Z",
+      "data_last_updated": "2026-10-15T05:20:11.987Z",
       "data_quality_tier": "SUPPORTED"
     },
     {
@@ -1869,8 +1923,8 @@
       "sector": "Aviation & Transport",
       "industry": "Low-Cost Passenger Airline & Air Cargo",
       "market_cap_category": "LARGE_CAP",
-      "current_price": 4813.1,
-      "price_change_pct": -2.37,
+      "current_price": 4776,
+      "price_change_pct": -1.18,
       "market_cap": 169200,
       "pe_ratio": 21.6,
       "pb_ratio": 6.8,
@@ -1887,7 +1941,7 @@
       "prebuy_verdict": "PASS",
       "key_catalyst": "International route expansion with wide-body A350 fleet orders + domestic market share exceeding 62%.",
       "business_summary": "India’s dominant low-cost airline with unmatched cost structure, young fuel-efficient fleet, and structural aviation growth tailwinds.",
-      "data_last_updated": "2026-10-08T14:44:24.007Z",
+      "data_last_updated": "2026-10-15T05:20:11.968Z",
       "data_quality_tier": "SUPPORTED"
     }
   ],
@@ -4672,7 +4726,7 @@
       "name": "High-Conviction Core Ideas",
       "description": "High-conviction structural compounders passing 8-Layer Pre-Buy Gate screening.",
       "is_default": true,
-      "company_count": 5,
+      "company_count": 6,
       "created_at": "2026-01-15T09:00:00+05:30",
       "companies": [
         {
@@ -4684,9 +4738,9 @@
           "price_change_pct": 1.85,
           "added_at": "2026-01-15T09:00:00+05:30",
           "notes": "Demerger value unlocking + EV platform leadership",
-          "research_status": "STRONG_SIGNAL",
+          "research_status": "INVESTIGATING",
           "last_gate_verdict": "Passes screening",
-          "last_reviewed_at": "2026-02-25"
+          "last_reviewed_at": "2026-10-08"
         },
         {
           "company_id": "comp-suzlon",
@@ -4739,10 +4793,60 @@
           "research_status": "WATCHING",
           "last_gate_verdict": "Passes screening",
           "last_reviewed_at": "2026-10-08"
+        },
+        {
+          "company_id": "comp-polycab",
+          "nse_symbol": "POLYCAB",
+          "company_name": "Polycab India Limited",
+          "sector": "Capital Goods & Electricals",
+          "current_price": 8151,
+          "price_change_pct": 2.02,
+          "added_at": "2026-10-08T20:03:55.963Z",
+          "notes": "Added from Company Workspace",
+          "research_status": "WATCHING",
+          "last_gate_verdict": "Passes screening",
+          "last_reviewed_at": "2026-10-08"
         }
       ],
       "user_id": "usr-default-01",
-      "updated_at": "2026-10-08T19:54:16.394Z"
+      "updated_at": "2026-10-16T04:29:19.699Z"
+    },
+    {
+      "watchlist_id": "wl-1792042077078",
+      "user_id": "usr-1792042077078-d4e87830",
+      "name": "Primary Watchlist",
+      "description": "Your top monitored ideas and investment theses",
+      "is_default": true,
+      "company_count": 2,
+      "created_at": "2026-10-15T05:27:57.078Z",
+      "companies": [
+        {
+          "company_id": "comp-01",
+          "nse_symbol": "TATAMOTORS",
+          "company_name": "Tata Motors",
+          "sector": "Automotive",
+          "current_price": 942.5,
+          "price_change_pct": 1.85,
+          "added_at": "2026-10-15T05:27:57.078Z",
+          "notes": "Demerger catalyst + EV market leadership",
+          "research_status": "INVESTIGATING",
+          "last_gate_verdict": "Passes screening",
+          "last_reviewed_at": "2026-10-15"
+        },
+        {
+          "company_id": "comp-02",
+          "nse_symbol": "SUZLON",
+          "company_name": "Suzlon Energy",
+          "sector": "Renewable Energy",
+          "current_price": 68.2,
+          "price_change_pct": 3.45,
+          "added_at": "2026-10-15T05:27:57.078Z",
+          "notes": "Deleveraged balance sheet + C&I wind demand",
+          "research_status": "STRONG_SIGNAL",
+          "last_gate_verdict": "Passes screening",
+          "last_reviewed_at": "2026-10-15"
+        }
+      ]
     }
   ],
   "theses": [
@@ -4752,10 +4856,10 @@
       "title": "Demerger Value Unlocking & JLR Deleveraging",
       "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
       "status": "ACTIVE",
-      "thesis_id": "th-1791489254896",
+      "thesis_id": "th-1792124957658",
       "user_id": "usr-default-01",
-      "created_at": "2026-10-08T19:54:14.896Z",
-      "updated_at": "2026-10-08T19:54:14.896Z"
+      "created_at": "2026-10-16T04:29:17.659Z",
+      "updated_at": "2026-10-16T04:29:17.659Z"
     },
     {
       "primary_symbol": "TATAMOTORS",
@@ -4763,10 +4867,10 @@
       "title": "Demerger Value Unlocking & JLR Deleveraging",
       "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
       "status": "ACTIVE",
-      "thesis_id": "th-1791488864599",
+      "thesis_id": "th-1792124467237",
       "user_id": "usr-default-01",
-      "created_at": "2026-10-08T19:47:44.599Z",
-      "updated_at": "2026-10-08T19:47:44.599Z"
+      "created_at": "2026-10-16T04:21:07.237Z",
+      "updated_at": "2026-10-16T04:21:07.237Z"
     },
     {
       "primary_symbol": "TATAMOTORS",
@@ -4774,10 +4878,10 @@
       "title": "Demerger Value Unlocking & JLR Deleveraging",
       "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
       "status": "ACTIVE",
-      "thesis_id": "th-1791486697390",
+      "thesis_id": "th-1792124438499",
       "user_id": "usr-default-01",
-      "created_at": "2026-10-08T19:11:37.390Z",
-      "updated_at": "2026-10-08T19:11:37.390Z"
+      "created_at": "2026-10-16T04:20:38.499Z",
+      "updated_at": "2026-10-16T04:20:38.499Z"
     },
     {
       "primary_symbol": "TATAMOTORS",
@@ -4785,10 +4889,32 @@
       "title": "Demerger Value Unlocking & JLR Deleveraging",
       "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
       "status": "ACTIVE",
-      "thesis_id": "th-1791476703388",
+      "thesis_id": "th-1792124347776",
       "user_id": "usr-default-01",
-      "created_at": "2026-10-08T16:25:03.388Z",
-      "updated_at": "2026-10-08T16:25:03.388Z"
+      "created_at": "2026-10-16T04:19:07.776Z",
+      "updated_at": "2026-10-16T04:19:07.776Z"
+    },
+    {
+      "primary_symbol": "TATAMOTORS",
+      "sector": "Automotive",
+      "title": "Demerger Value Unlocking & JLR Deleveraging",
+      "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
+      "status": "ACTIVE",
+      "thesis_id": "th-1792116209934",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T02:03:29.934Z",
+      "updated_at": "2026-10-16T02:03:29.934Z"
+    },
+    {
+      "primary_symbol": "TATAMOTORS",
+      "sector": "Automotive",
+      "title": "Demerger Value Unlocking & JLR Deleveraging",
+      "hypothesis": "Restructuring into standalone CV and PV entities unlocks latent value.",
+      "status": "ACTIVE",
+      "thesis_id": "th-1792115355591",
+      "user_id": "usr-default-01",
+      "created_at": "2026-10-16T01:49:15.591Z",
+      "updated_at": "2026-10-16T01:49:15.591Z"
     },
     {
       "primary_symbol": "TATAMOTORS",
@@ -5773,9 +5899,24 @@
   ],
   "alerts": [
     {
+      "alert_type": "SIGNAL",
+      "title": "[HIGH] POLYCAB: New F7: Cross-Asset Lead Indicators Signal: \"MCX Copper-to-Gold Ratio Breakout Signals Early Domestic Industrial Electrification Capex Cycle\"",
+      "what_changed": "New F7: Cross-Asset Lead Indicators Signal: \"MCX Copper-to-Gold Ratio Breakout Signals Early Domestic Industrial Electrification Capex Cycle\"",
+      "why_it_matters": "Cross-asset commodity ratios provide objective leading macroeconomic confirmation of industrial capital expenditure cycles before quarterly corporate earnings reports reflect order bookings.",
+      "affected_symbol": "POLYCAB",
+      "link": "/company/POLYCAB",
+      "severity": "HIGH",
+      "source": "MCX Industrial Metal Futures & RBI Sovereign Yield Desk",
+      "required_investigation": "Review signal evidence in Discovery Hub and evaluate affected supply chain exposures for POLYCAB.",
+      "provenance": "SEED_DATA",
+      "alert_id": "al-1792115356419",
+      "created_at": "2026-10-16T01:49:16.419Z",
+      "is_read": false
+    },
+    {
       "alert_type": "VALUATION",
-      "title": "[HIGH] SUZLON: Daily market quote shifted -6.37% to ₹36.43",
-      "what_changed": "Daily market quote shifted -6.37% to ₹36.43",
+      "title": "[HIGH] SUZLON: Daily market quote shifted +9.76% to ₹41.27",
+      "what_changed": "Daily market quote shifted +9.76% to ₹41.27",
       "why_it_matters": "P/E multiple adjusted to 42.1x; market cap ₹93,200 Cr",
       "affected_symbol": "SUZLON",
       "link": "/company/SUZLON",
@@ -5783,23 +5924,23 @@
       "source": "NSE / BSE Real-time Feed Adapter (Yahoo / Market Cache)",
       "required_investigation": "Compare valuation multiples against 5-dimension industry & sector benchmarks.",
       "provenance": "USER_DATA",
-      "alert_id": "al-1791476704424",
-      "created_at": "2026-10-08T16:25:04.424Z",
+      "alert_id": "al-1792115356398",
+      "created_at": "2026-10-16T01:49:16.398Z",
       "is_read": false
     },
     {
       "alert_type": "VALUATION",
-      "title": "[HIGH] HDFCBANK: Daily market quote shifted -4.01% to ₹692.25",
-      "what_changed": "Daily market quote shifted -4.01% to ₹692.25",
-      "why_it_matters": "P/E multiple adjusted to 18.6x; market cap ₹13,08,000 Cr",
-      "affected_symbol": "HDFCBANK",
-      "link": "/company/HDFCBANK",
+      "title": "[HIGH] INFY: Daily market quote shifted +9.14% to ₹1116.9",
+      "what_changed": "Daily market quote shifted +9.14% to ₹1116.9",
+      "why_it_matters": "P/E multiple adjusted to 28.4x; market cap ₹7,55,000 Cr",
+      "affected_symbol": "INFY",
+      "link": "/company/INFY",
       "severity": "HIGH",
       "source": "NSE / BSE Real-time Feed Adapter (Yahoo / Market Cache)",
       "required_investigation": "Compare valuation multiples against 5-dimension industry & sector benchmarks.",
       "provenance": "USER_DATA",
-      "alert_id": "al-1791476704404",
-      "created_at": "2026-10-08T16:25:04.404Z",
+      "alert_id": "al-1792115356386",
+      "created_at": "2026-10-16T01:49:16.386Z",
       "is_read": false
     },
     {
@@ -5927,8 +6068,8 @@
       "fact_level": "FACT",
       "thesis_impact": "SUPPORTS",
       "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
-      "delta_id": "dt-1791489256608-362",
-      "detected_at": "2026-10-08T19:54:16.608Z"
+      "delta_id": "dt-1792124960155-683",
+      "detected_at": "2026-10-16T04:29:20.155Z"
     },
     {
       "company_symbol": "SUZLON",
@@ -5941,8 +6082,8 @@
       "fact_level": "FACT",
       "thesis_impact": "SUPPORTS",
       "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
-      "delta_id": "dt-1791488866330-15",
-      "detected_at": "2026-10-08T19:47:46.330Z"
+      "delta_id": "dt-1792124468704-619",
+      "detected_at": "2026-10-16T04:21:08.704Z"
     },
     {
       "company_symbol": "SUZLON",
@@ -5955,8 +6096,8 @@
       "fact_level": "FACT",
       "thesis_impact": "SUPPORTS",
       "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
-      "delta_id": "dt-1791486699912-105",
-      "detected_at": "2026-10-08T19:11:39.912Z"
+      "delta_id": "dt-1792124440009-730",
+      "detected_at": "2026-10-16T04:20:40.009Z"
     },
     {
       "company_symbol": "SUZLON",
@@ -5969,8 +6110,36 @@
       "fact_level": "FACT",
       "thesis_impact": "SUPPORTS",
       "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
-      "delta_id": "dt-1791476706103-477",
-      "detected_at": "2026-10-08T16:25:06.103Z"
+      "delta_id": "dt-1792124349243-530",
+      "detected_at": "2026-10-16T04:19:09.243Z"
+    },
+    {
+      "company_symbol": "SUZLON",
+      "field_changed": "Q3_ORDER_BOOK_DISCLOSURE",
+      "previous_value": "3.8 GW",
+      "new_value": "4.2 GW",
+      "source_tier": "TIER_1_OFFICIAL_REGULATORY",
+      "source_name": "BSE Exchange Corporate Filing",
+      "data_mode": "AUDITED",
+      "fact_level": "FACT",
+      "thesis_impact": "SUPPORTS",
+      "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
+      "delta_id": "dt-1792116211404-659",
+      "detected_at": "2026-10-16T02:03:31.404Z"
+    },
+    {
+      "company_symbol": "SUZLON",
+      "field_changed": "Q3_ORDER_BOOK_DISCLOSURE",
+      "previous_value": "3.8 GW",
+      "new_value": "4.2 GW",
+      "source_tier": "TIER_1_OFFICIAL_REGULATORY",
+      "source_name": "BSE Exchange Corporate Filing",
+      "data_mode": "AUDITED",
+      "fact_level": "FACT",
+      "thesis_impact": "SUPPORTS",
+      "explanation": "Order book expanded to 4.2 GW representing multi-year execution visibility.",
+      "delta_id": "dt-1792115357247-435",
+      "detected_at": "2026-10-16T01:49:17.247Z"
     },
     {
       "company_symbol": "SUZLON",

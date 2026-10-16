@@ -59,6 +59,7 @@ const SettingsPage = lazy(() => import('./pages/PlatformPages').then((m) => ({ d
 const SearchResultsPage = lazy(() => import('./pages/PlatformPages').then((m) => ({ default: m.SearchResultsPage })));
 const WatchlistsPage = lazy(() => import('./pages/PlatformPages').then((m) => ({ default: m.WatchlistsPage })));
 const ExportsPage = lazy(() => import('./pages/PlatformPages').then((m) => ({ default: m.ExportsPage })));
+const VerifyFirstPage = lazy(() => import('./pages/VerifyFirstPage').then((m) => ({ default: m.VerifyFirstPage })));
 
 export function App() {
   const { user, isLoading: isAuthLoading, logout, updateProfile, deleteAccount } = useAuth();
@@ -589,6 +590,13 @@ export function App() {
               onInvestigate={handleOpenInvestigate}
               onCreateThesis={(sym) => handleOpenThesisModal(sym)}
               onSelectSignal={handleSelectSignal}
+            />
+          )}
+
+          {currentRoute === '/verify-first' && (
+            <VerifyFirstPage
+              onSelectCompany={handleSelectCompany}
+              onSelectThesis={() => navigateTo('/workspace')}
             />
           )}
 

@@ -29,6 +29,9 @@ import {
   ThesisEvolutionEvent,
   NewsArticle,
   NewsFeedResult,
+  VerifyFirstClaim,
+  VerifyFirstAuditSummary,
+  ThesisAuditResult,
 } from '../types';
 import {
   SEED_COMPANIES,
@@ -881,5 +884,54 @@ export const api = {
 
   getTrackRecordExportUrl(): string {
     return `${BASE_URL}/export/track-record/csv`;
+  },
+
+  // ==========================================
+  // VERIFY-FIRST EVIDENCE ENGINE ENDPOINTS
+  // ==========================================
+  async getVerifyFirstPatentContext(): Promise<{ patent_connection_statement: string; metadata: any }> {
+    return safeFetch<{ patent_connection_statement: string; metadata: any }>(`${BASE_URL}/verify-first/patent-context`);
+  },
+
+  async getVerifyFirstSummary(symbol?: string): Promise<VerifyFirstAuditSummary> {
+    const url = symbol ? `${BASE_URL}/verify-first/summary?symbol=${encodeURIComponent(symbol)}` : `${BASE_URL}/verify-first/summary`;
+    return safeFetch<VerifyFirstAuditSummary>(url);
+  },
+
+  async getVerifyFirstClaims(filter?: {
+    symbol?: string;
+    status?: string;
+    freshness?: string;
+    tier?: string;
+    category?: string;
+    search?: string;
+  }): Promise<{ claims: VerifyFirstClaim[]; total: number }> {
+    const params = new URLSearchParams();
+    if (filter?.symbol) params.set('symbol', filter.symbol);
+    if (filter?.status) params.set('status', filter.status);
+    if (filter?.freshness) params.set('freshness', filter.freshness);
+    if (filter?.tier) params.set('tier', filter.tier);
+    if (filter?.category) params.set('category', filter.category);
+    if (filter?.search) params.set('search', filter.search);
+
+    const query = params.toString();
+    return safeFetch<{ claims: VerifyFirstClaim[]; total: number }>(
+      `${BASE_URL}/verify-first/claims${query ? `?${query}` : ''}`
+    );
+  },
+
+  async getVerifyFirstClaimById(claimId: string): Promise<VerifyFirstClaim> {
+    return safeFetch<VerifyFirstClaim>(`${BASE_URL}/verify-first/claims/${claimId}`);
+  },
+
+  async evaluateVerifyFirstClaim(claim: Partial<VerifyFirstClaim>): Promise<VerifyFirstClaim> {
+    return safeFetch<VerifyFirstClaim>(`${BASE_URL}/verify-first/evaluate`, {
+      method: 'POST',
+      body: JSON.stringify(claim),
+    });
+  },
+
+  async auditThesisEvidence(thesisId: string): Promise<ThesisAuditResult> {
+    return safeFetch<ThesisAuditResult>(`${BASE_URL}/verify-first/thesis/${encodeURIComponent(thesisId)}/audit`);
   },
 };
