@@ -982,10 +982,10 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({
               subtitle="Evaluated Companies"
             />
             <StatCard
-              label="Positive Return Rate"
+              label="Sample Outperformance Rate"
               value={trackRecordStats ? `${trackRecordStats.win_rate_pct}%` : '75.0%'}
               change={trackRecordStats?.win_rate_pct || 75}
-              changeSuffix="Outperformed Market"
+              changeSuffix="12 Retrospective Seeded Cases"
             />
             <StatCard
               label="Average Lead Time"
@@ -1094,7 +1094,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({
                             variant={(entry.alpha_generated_pct ?? 0) >= 50 ? 'emerald' : 'teal'}
                             size="sm"
                           >
-                            +{(entry.alpha_generated_pct ?? 0)}% Return
+                            +{(entry.alpha_generated_pct ?? 0)}% Alpha vs Benchmark
                           </Badge>
                           <span className="font-mono font-bold text-[#F3F4F6] text-sm">{entry.nse_symbol}</span>
                           <span className="text-[11px] text-[#6B7280] font-mono">

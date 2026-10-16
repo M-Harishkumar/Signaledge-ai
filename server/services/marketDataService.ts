@@ -173,17 +173,20 @@ export class MarketDataService {
 
       const mktCap = fund?.market_cap || Math.round((price * 50000000) / 10000000);
       const mktCapCategory = fund?.market_cap_category || (mktCap >= 20000 ? 'LARGE_CAP' : mktCap >= 5000 ? 'MID_CAP' : 'SMALL_CAP');
-      const pe = fund?.pe_ratio || 24.5;
-      const roce = fund?.roce || 16.5;
-      const roe = fund?.roe || 14.8;
-      const de = fund?.de_ratio !== undefined ? fund.de_ratio : 0.35;
-      const score = Math.min(95, Math.max(65, Math.round(75 + roce / 3 - de * 10)));
+      const pe = fund?.pe_ratio;
+      const roce = fund?.roce;
+      const roe = fund?.roe;
+      const de = fund?.de_ratio;
+      const hasCoreFundamentals = roce !== undefined && de !== undefined;
+      const score = hasCoreFundamentals
+        ? Math.min(95, Math.max(50, Math.round(70 + (roce || 0) / 3 - (de || 0) * 10)))
+        : 60; // Conservative baseline when unverified
 
       const newCompany: Company = {
         company_id: `comp-${cleanSym.toLowerCase()}`,
         nse_symbol: cleanSym,
-        bse_code: `5${Math.floor(10000 + Math.random() * 89999)}`,
-        isin: `INE${Math.floor(100 + Math.random() * 899)}A010${Math.floor(10 + Math.random() * 89)}`,
+        bse_code: fund?.bse_code || 'UNLISTED_BSE', // Do not fabricate BSE code
+        isin: fund?.isin || 'NOT_AVAILABLE', // Do not fabricate ISIN
         company_name: compName,
         legal_name: fund?.legal_name,
         sector: fund?.sector || 'Public Equity (NSE/BSE)',
@@ -193,30 +196,30 @@ export class MarketDataService {
         price_change_pct: changePct,
         market_cap: mktCap,
         enterprise_value: fund?.enterprise_value,
-        pe_ratio: pe,
+        pe_ratio: pe !== undefined ? pe : 0,
         forward_pe: fund?.forward_pe,
-        pb_ratio: fund?.pb_ratio || 3.2,
+        pb_ratio: fund?.pb_ratio ?? 0,
         ps_ratio: fund?.ps_ratio,
         ev_ebitda: fund?.ev_ebitda,
         ev_sales: fund?.ev_sales,
         peg_ratio: fund?.peg_ratio,
         dividend_yield: fund?.dividend_yield,
-        roce: roce,
-        roe: roe,
+        roce: roce !== undefined ? roce : 0,
+        roe: roe !== undefined ? roe : 0,
         roa: fund?.roa,
         operating_margin_pct: fund?.operating_margin_pct,
         net_margin_pct: fund?.net_margin_pct,
         gross_margin_pct: fund?.gross_margin_pct,
         ebitda_margin_pct: fund?.ebitda_margin_pct,
-        de_ratio: de,
+        de_ratio: de !== undefined ? de : 999.0, // High default leverage when unconfirmed
         current_ratio: fund?.current_ratio,
         quick_ratio: fund?.quick_ratio,
-        promoter_pct: fund?.promoter_pct || 51.5,
-        promoter_pledge_pct: fund?.promoter_pledge_pct || 0.0,
-        fii_pct: fund?.fii_pct || 18.2,
-        dii_pct: fund?.dii_pct || 14.6,
-        fii_qoq_change: 0.4,
-        dii_qoq_change: 0.2,
+        promoter_pct: fund?.promoter_pct ?? 0,
+        promoter_pledge_pct: fund?.promoter_pledge_pct ?? 100, // Forces gate failure when unconfirmed
+        fii_pct: fund?.fii_pct ?? 0,
+        dii_pct: fund?.dii_pct ?? 0,
+        fii_qoq_change: 0.0,
+        dii_qoq_change: 0.0,
         revenue_growth_1y: fund?.revenue_growth_1y,
         profit_growth_1y: fund?.profit_growth_1y,
         beta: fund?.beta,
@@ -227,15 +230,15 @@ export class MarketDataService {
         volume: quote.regularMarketVolume,
         avg_volume_10d: fund?.avg_volume_10d,
         signal_edge_score: score,
-        prebuy_verdict: score >= 75 ? 'PASS' : score >= 60 ? 'INVESTIGATE' : 'HIGH_RISK',
+        prebuy_verdict: hasCoreFundamentals && score >= 75 ? 'PASS' : 'INVESTIGATE',
         key_catalyst: `Live exchange feed active. Real-time 24h momentum ${changePct >= 0 ? '+' : ''}${changePct}%.`,
-        business_summary: fund?.business_summary || `Indian listed corporation traded on National Stock Exchange (NSE: ${cleanSym}) and Bombay Stock Exchange (BSE). Verified primary exchange feed.`,
+        business_summary: fund?.business_summary || `Indian listed corporation traded on National Stock Exchange (NSE: ${cleanSym}). Live secondary quote feed.`,
         website: fund?.website,
         headquarters: fund?.headquarters || 'Mumbai, India',
         country: 'India',
         data_last_updated: new Date().toISOString().split('T')[0],
-        data_source_tier: 'TIER_1_OFFICIAL_REGULATORY',
-        data_freshness_label: 'Live Exchange Feed',
+        data_source_tier: hasCoreFundamentals ? 'TIER_2_PRIMARY_MEDIA' : 'TIER_4_UNVERIFIED_ESTIMATE',
+        data_freshness_label: 'Live Quote / Secondary Fundamentals',
       };
 
       db.addOrUpdateCompany(newCompany);

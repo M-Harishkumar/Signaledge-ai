@@ -66,7 +66,7 @@ async function startServer() {
   app.get('/api/health', (_req: Request, res: Response) => {
     res.json({
       status: 'healthy',
-      version: '2.6.4',
+      version: '2.7.0',
       uptime_seconds: Math.floor(process.uptime()),
       environment: config.nodeEnv,
       data_mode: 'DEMO_CACHED_NSE_FEED', // Honest disclosure
@@ -347,8 +347,17 @@ async function startServer() {
   // 8-LAYER PRE-BUY GATE (Exact Formulas & UNKNOWN Handling with Verify-First Engine)
   const handlePreBuyCheck = (req: Request, res: Response) => {
     const symbol = (req.params.nse_symbol || req.params.symbol || 'TATAMOTORS').toUpperCase();
+    const company = db.getCompanies().find((c) => c.nse_symbol === symbol);
+    if (!company) {
+      return res.status(404).json({
+        error: {
+          code: 'COMPANY_NOT_FOUND',
+          message: `Company with symbol ${symbol} not found in database. Cannot perform pre-buy screening without primary company record.`
+        }
+      });
+    }
+
     const { auto_populate, user_thesis, layer_inputs } = req.body || {};
-    const company = db.getCompanies().find((c) => c.nse_symbol === symbol) || db.getCompanies()[0];
 
     // Evaluate layer by layer with Verify-First Engine (Guarantees missing data NEVER passes)
     const roceCalc = FinancialCalculator.calculateRoCE(undefined, undefined, company.roce);

@@ -2,6 +2,7 @@
 ### AI-Powered Investment Opportunity Discovery Platform for Indian Equities
 
 **Author:** Harishkumar M  
+**Version:** 2.7.0  
 **Repository:** [https://github.com/M-Harishkumar/Signaledge-ai](https://github.com/M-Harishkumar/Signaledge-ai)
 
 ---

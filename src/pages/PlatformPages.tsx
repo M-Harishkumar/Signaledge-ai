@@ -597,7 +597,7 @@ export const TrackRecordPage: React.FC<{
                       variant={(entry.alpha_generated_pct ?? 0) >= 50 ? 'emerald' : 'teal'}
                       size="sm"
                     >
-                      +{(entry.alpha_generated_pct ?? 0)}% Return
+                      +{(entry.alpha_generated_pct ?? 0)}% Alpha vs Benchmark
                     </Badge>
                     <span className="font-mono font-bold text-[#F3F4F6]">{entry.nse_symbol}</span>
                     <span className="text-[11px] text-[#6B7280] font-mono">

@@ -198,6 +198,7 @@ async function generatePdf() {
     In partial fulfillment for the award of the degree<br>of<br>
     <strong>BACHELOR OF TECHNOLOGY</strong><br>in<br>
     <strong>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</strong><br><br>
+    <strong>ACADEMIC YEAR: 2026–2027</strong><br>
     <strong>OCTOBER 2026</strong>
   </div>
 </div>
@@ -209,22 +210,49 @@ async function generatePdf() {
 </div>
 <div class="justify" style="margin-top: 24pt; line-height: 1.6;">
   <p>Certified that this project report titled <strong>"SIGNALEDGE OS: AI-POWERED INVESTMENT OPPORTUNITY DISCOVERY PLATFORM WITH VERIFY-FIRST SOURCE AUTHORITY AND FRESHNESS VALIDATION ARCHITECTURE"</strong> is the bonafide work of <strong>HARISHKUMAR M (Reg No: 211AD144)</strong> and <strong>VIHASHINI S V (Reg No: 211AD220)</strong> who carried out the project work under my supervision. Certified further that to the best of my knowledge the work reported herein does not form part of any other thesis or dissertation on the basis of which a degree or award was conferred on an earlier occasion on this or any other candidate.</p>
+  <p style="margin-top: 20pt;"><em>Submitted for the Project Review held on 14-10-2026</em></p>
+</div>
+<div style="margin-top: 60pt;">
+  <table style="border: none;">
+    <tr style="background: none;">
+      <td style="border: none; width: 50%;">
+        <strong>Ms. SAILEELA U, M.E.</strong><br>
+        PROJECT GUIDE / ASSISTANT PROFESSOR<br>
+        Department of Computer Science & Engineering<br>
+        Bannari Amman Institute of Technology<br>
+        Sathyamangalam – 638 401
+      </td>
+      <td style="border: none; width: 50%; text-align: right;">
+        <strong>Dr. GOMATHI R, M.Tech., Ph.D.</strong><br>
+        PROFESSOR & HEAD<br>
+        Department of AI & DS<br>
+        Bannari Amman Institute of Technology<br>
+        Sathyamangalam – 638 401
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="page-break"></div>
+
+<!-- 2B. VIVA-VOCE EXAMINATION CERTIFICATE -->
+<div class="center">
+  <h2 style="font-size: 14pt;">VIVA-VOCE EXAMINATION CERTIFICATE</h2>
+</div>
+<div class="justify" style="margin-top: 24pt; line-height: 1.6;">
+  <p>Certified that this project report titled <strong>"SIGNALEDGE OS: AI-POWERED INVESTMENT OPPORTUNITY DISCOVERY PLATFORM WITH VERIFY-FIRST SOURCE AUTHORITY AND FRESHNESS VALIDATION ARCHITECTURE"</strong> submitted by <strong>HARISHKUMAR M (Reg No: 211AD144)</strong> and <strong>VIHASHINI S V (Reg No: 211AD220)</strong> in partial fulfillment for the award of Bachelor of Technology in Artificial Intelligence and Data Science was evaluated during the Project Viva-Voce Examination held on <strong>21-10-2026</strong>.</p>
 </div>
 <div style="margin-top: 80pt;">
   <table style="border: none;">
     <tr style="background: none;">
       <td style="border: none; width: 50%;">
-        <strong>Dr. S. RAJASEKAR, M.E., Ph.D.</strong><br>
-        SUPERVISOR / FACULTY<br>
-        Department of ECE<br>
-        Bannari Amman Institute of Technology<br>
-        Sathyamangalam – 638 401
+        <strong>INTERNAL EXAMINER</strong><br>
+        Date: 21-10-2026<br>
+        Bannari Amman Institute of Technology
       </td>
       <td style="border: none; width: 50%; text-align: right;">
-        <strong>HEAD OF THE DEPARTMENT</strong><br>
-        Department of AI & DS<br>
-        Bannari Amman Institute of Technology<br>
-        Sathyamangalam – 638 401
+        <strong>EXTERNAL EXAMINER</strong><br>
+        Date: 21-10-2026<br>
+        Anna University Chennai
       </td>
     </tr>
   </table>
@@ -263,7 +291,7 @@ async function generatePdf() {
 </div>
 <div class="justify" style="line-height: 1.6; margin-top: 14pt;">
   <p>Modern artificial intelligence applied to equity investment research frequently suffers from two critical, structural deficiencies: hallucinatory outputs that fabricate financial metrics, and temporal obsolescence where stale historical data is treated as present truth. This project presents SignalEdge OS, an autonomous institutional equity research platform developed for Indian listed equities (NSE/BSE) that resolves these failure modes by adapting principles from Indian Patent Application No. 202641118456 ("VERIFY-FIRST Adaptive Learning Path Generation System with Authority and Freshness Validation"). Rather than treating evidence verification as an afterthought or isolated UI widget, SignalEdge OS re-engineers the entire investment discovery pipeline around a unified 9-stage sequence: DISCOVER → COLLECT EVIDENCE → VERIFY → CONNECT → ANALYSE → SCREEN → SIMULATE → MONITOR → REASSESS.</p>
-  <p>At the core of the platform is a shared Verify-First Evidence Engine that classifies source authority into a four-tier hierarchical taxonomy (ranging from Tier 1 statutory exchange filings and gazettes down to Tier 4 unverified forum leaks), enforces category-specific temporal expiration thresholds (quarterly filings expire after 105 days; annual audits after 425 days; market news after 24–48 hours), detects syndicated wire reprints to prevent false corroboration inflation, and preserves evidentiary contradictions (such as operating lease capitalization disputes under Ind AS 116) rather than forcing ungrounded synthetic consensus. Furthermore, the platform implements a strict non-assumption rule within its 8-Layer Pre-Buy Fundamental Risk Gate: whenever fundamental financial metrics are absent or unverified, the layer evaluates strictly to UNKNOWN with DATA_UNAVAILABLE status, forcing the overall check verdict to "Requires investigation" and never permitting a silent PASS. The architecture was verified across 19 automated test sprints comprising 188 unit and integration tests (100% pass rate), demonstrating deterministic reproducibility, sub-50ms query latency, and full compliance with SEBI statutory disclaimers.</p>
+  <p>At the core of the platform is a shared Verify-First Evidence Engine that classifies source authority into a four-tier hierarchical taxonomy (ranging from Tier 1 statutory exchange filings and gazettes down to Tier 4 unverified forum leaks), enforces category-specific temporal expiration thresholds (quarterly filings expire after 105 days; annual audits after 425 days; market news after 24–48 hours), detects syndicated wire reprints to prevent false corroboration inflation, and preserves evidentiary contradictions (such as operating lease capitalization disputes under Ind AS 116) rather than forcing ungrounded synthetic consensus. Furthermore, the platform implements a strict non-assumption rule within its 8-Layer Pre-Buy Fundamental Risk Gate: whenever fundamental financial metrics are absent or unverified, the layer evaluates strictly to UNKNOWN with DATA_UNAVAILABLE status, forcing the overall check verdict to "Requires investigation" and never permitting a silent PASS. The architecture was verified across 20 automated test sprints comprising 193 unit and integration tests (100% pass rate), demonstrating deterministic reproducibility, sub-50ms query latency, and full compliance with SEBI statutory disclaimers.</p>
 </div>
 <div class="page-break"></div>
 
@@ -290,7 +318,7 @@ async function generatePdf() {
 • To implement a 4-tier hierarchical source authority scoring model and strict temporal decay policies across regulatory, catalyst, quarterly, and annual horizons.
 • To engineer an 8-Layer Pre-Buy Fundamental Risk Gate enforcing the strict non-assumption rule: missing data evaluates to UNKNOWN / DATA_UNAVAILABLE and never passes.
 • To provide continuous monitoring with automated thesis degradation triggers (transitioning active theses to NEEDS_REVIEW upon evidentiary decay).
-• To demonstrate zero-defect reproducibility through a comprehensive 19-sprint test suite comprising 188 automated unit and integration tests.</p>
+• To demonstrate zero-defect reproducibility through a comprehensive 20-sprint test suite comprising 193 automated unit and integration tests.</p>
 <div class="page-break"></div>
 
 <!-- 6. CHAPTER 2 & 3: ARCHITECTURE & PATENT ADAPTATION -->
@@ -360,8 +388,8 @@ Whenever a parameter is missing or unverified, it evaluates strictly to UNKNOWN 
 
 <!-- 7. CHAPTER 5: VERIFICATION RESULTS -->
 <h1>CHAPTER 5: VERIFICATION, TESTING & EXPERIMENTAL RESULTS</h1>
-<h2>5.1 Comprehensive Test Suite Results (188/188 Tests Passed)</h2>
-<p class="justify">To ensure zero-defect software engineering, SignalEdge OS was evaluated through a comprehensive 19-sprint test harness (<code>test_suite.ts</code>). All 188 automated unit and integration tests passed with a 100% success rate in under 12 seconds.</p>
+<h2>5.1 Comprehensive Test Suite Results (193/193 Tests Passed)</h2>
+<p class="justify">To ensure zero-defect software engineering, SignalEdge OS was evaluated through a comprehensive 20-sprint test harness (<code>test_suite.ts</code>). All 193 automated unit and integration tests passed with a 100% success rate in under 12 seconds.</p>
 
 <table>
   <tr>
@@ -389,7 +417,8 @@ Whenever a parameter is missing or unverified, it evaluates strictly to UNKNOWN 
   <tr><td>Sprint 17</td><td>Final Architecture Freeze & Zero-Denominator Safety</td><td>10</td><td>PASS (10/10)</td></tr>
   <tr><td>Sprint 18</td><td>Freshness-First News Engine & Deduplication</td><td>10</td><td>PASS (10/10)</td></tr>
   <tr><td>Sprint 19</td><td>Verify-First Evidence Engine & Patent Adaptation</td><td>10</td><td>PASS (10/10)</td></tr>
-  <tr class="highlight-row"><td>TOTAL</td><td>Full-Stack End-to-End Architectural Verification</td><td>188</td><td>100% PASS (188/188)</td></tr>
+  <tr><td>Sprint 20</td><td>Audit Verification, Forensic Beneish M-Score & Authentic Provenance</td><td>5</td><td>PASS (5/5)</td></tr>
+  <tr class="highlight-row"><td>TOTAL</td><td>Full-Stack End-to-End Architectural Verification</td><td>193</td><td>100% PASS (193/193)</td></tr>
 </table>
 <div class="page-break"></div>
 

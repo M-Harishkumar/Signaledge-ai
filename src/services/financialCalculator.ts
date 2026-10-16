@@ -898,4 +898,72 @@ export class FinancialCalculator {
     if (cfo === undefined || capex === undefined) return null;
     return Math.round((cfo - Math.abs(capex)) * 10) / 10;
   }
+
+  /**
+   * Beneish M-Score (Forensic Earnings Manipulation Detection)
+   * Formula: M = -4.84 + 0.920*DSRI + 0.528*GMI + 0.404*AQI + 0.892*SGI + 0.115*DEPI - 0.172*SGAI + 4.037*TATA + 0.0327*LVGI
+   * Benchmark Hurdle: M > -1.78 indicates high probability of accounting manipulation. M <= -1.78 indicates non-manipulator.
+   */
+  public static calculateBeneishMScore(variables?: {
+    dsri?: number; // Days Sales in Receivables Index
+    gmi?: number;  // Gross Margin Index
+    aqi?: number;  // Asset Quality Index
+    sgi?: number;  // Sales Growth Index
+    depi?: number; // Depreciation Index
+    sgai?: number; // Sales, General & Administrative expenses Index
+    tata?: number; // Total Accruals to Total Assets
+    lvgi?: number; // Leverage Index
+  }): CalculationResult {
+    if (
+      !variables ||
+      variables.dsri === undefined ||
+      variables.gmi === undefined ||
+      variables.aqi === undefined ||
+      variables.sgi === undefined ||
+      variables.depi === undefined ||
+      variables.sgai === undefined ||
+      variables.tata === undefined ||
+      variables.lvgi === undefined
+    ) {
+      return {
+        metric: 'Beneish M-Score (Forensic Accounting)',
+        formula: '-4.84 + 0.92*DSRI + 0.528*GMI + 0.404*AQI + 0.892*SGI + 0.115*DEPI - 0.172*SGAI + 4.037*TATA + 0.0327*LVGI',
+        inputs: variables || {},
+        result: 0,
+        formattedResult: 'Data Unavailable',
+        threshold: '≤ -1.78 (Non-manipulator)',
+        status: 'UNKNOWN',
+        explanation: 'Multi-year accrual and balance sheet index variables unavailable to compute full 8-variable Beneish M-Score.',
+      };
+    }
+
+    const { dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi } = variables;
+    const mScore =
+      -4.84 +
+      0.920 * dsri +
+      0.528 * gmi +
+      0.404 * aqi +
+      0.892 * sgi +
+      0.115 * depi -
+      0.172 * sgai +
+      4.037 * tata +
+      0.0327 * lvgi;
+
+    const rounded = Math.round(mScore * 100) / 100;
+    const status = rounded <= -1.78 ? 'PASS' : 'FAIL';
+
+    return {
+      metric: 'Beneish M-Score (Forensic Accounting)',
+      formula: '-4.84 + 0.92*DSRI + 0.528*GMI + 0.404*AQI + 0.892*SGI + 0.115*DEPI - 0.172*SGAI + 4.037*TATA + 0.0327*LVGI',
+      inputs: { dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi },
+      result: rounded,
+      formattedResult: `${rounded.toFixed(2)}`,
+      threshold: '≤ -1.78',
+      status,
+      explanation:
+        status === 'PASS'
+          ? `M-Score of ${rounded.toFixed(2)} is below the -1.78 threshold, indicating low probability of financial statement manipulation.`
+          : `M-Score of ${rounded.toFixed(2)} exceeds the -1.78 threshold, signaling elevated risk of earnings manipulation or aggressive accruals.`,
+    };
+  }
 }

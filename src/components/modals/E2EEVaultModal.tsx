@@ -79,7 +79,7 @@ export const E2EEVaultModal: React.FC<E2EEVaultModalProps> = ({
           <div className="p-3 rounded-lg bg-[#161F30] border border-[#1F293D] text-xs text-[#9CA3AF] flex items-start gap-2.5">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <span>
-              Your keys never leave your browser. Passphrase derives AES-GCM master key using 600,000 PBKDF2 iterations.
+              Client-side session protection via Web Crypto API. Passphrase derives an AES-GCM 256-bit key using 100,000 PBKDF2 iterations to lock in-memory thesis notes.
             </span>
           </div>
 

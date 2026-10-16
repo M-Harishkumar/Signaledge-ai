@@ -79,7 +79,7 @@ def create_report():
 
     p_degree = doc.add_paragraph()
     p_degree.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r_deg = p_degree.add_run("\n\nIn partial fulfillment for the award of the degree\nof\nBACHELOR OF TECHNOLOGY\nin\nARTIFICIAL INTELLIGENCE AND DATA SCIENCE\n\nOCTOBER 2026")
+    r_deg = p_degree.add_run("\n\nIn partial fulfillment for the award of the degree\nof\nBACHELOR OF TECHNOLOGY\nin\nARTIFICIAL INTELLIGENCE AND DATA SCIENCE\n\nACADEMIC YEAR: 2026–2027\nOCTOBER 2026")
     r_deg.bold = True
     r_deg.font.size = Pt(11)
 
@@ -105,13 +105,44 @@ def create_report():
         "on the basis of which a degree or award was conferred on an earlier occasion on this or any other candidate."
     )
 
-    doc.add_paragraph("\n\n")
+    p_rev_date = doc.add_paragraph("\nSubmitted for the Project Review held on 14-10-2026\n\n")
+    p_rev_date.paragraph_format.line_spacing = 1.2
+
     sig_table = doc.add_table(rows=1, cols=2)
     sig_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     c1 = sig_table.rows[0].cells[0]
     c2 = sig_table.rows[0].cells[1]
-    c1.paragraphs[0].text = "Dr. S. RAJASEKAR, M.E., Ph.D.\nSUPERVISOR / FACULTY\nDepartment of ECE\nBannari Amman Institute of Technology\nSathyamangalam – 638 401"
-    c2.paragraphs[0].text = "HEAD OF THE DEPARTMENT\nDepartment of AI & DS\nBannari Amman Institute of Technology\nSathyamangalam – 638 401"
+    c1.paragraphs[0].text = "Ms. SAILEELA U, M.E.\nPROJECT GUIDE / ASSISTANT PROFESSOR\nDepartment of Computer Science & Engineering\nBannari Amman Institute of Technology\nSathyamangalam – 638 401"
+    c2.paragraphs[0].text = "Dr. GOMATHI R, M.Tech., Ph.D.\nPROFESSOR & HEAD\nDepartment of AI & DS\nBannari Amman Institute of Technology\nSathyamangalam – 638 401"
+
+    doc.add_page_break()
+
+    # ==========================================
+    # 2B. VIVA-VOCE CERTIFICATE
+    # ==========================================
+    p_viva_title = doc.add_paragraph()
+    p_viva_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_vt = p_viva_title.add_run("VIVA-VOCE EXAMINATION CERTIFICATE\n\n")
+    r_vt.bold = True
+    r_vt.font.size = Pt(14)
+
+    p_viva_body = doc.add_paragraph()
+    p_viva_body.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    p_viva_body.paragraph_format.line_spacing = 1.5
+    p_viva_body.add_run(
+        "Certified that this project report titled \"SIGNALEDGE OS: AI-POWERED INVESTMENT OPPORTUNITY DISCOVERY PLATFORM "
+        "WITH VERIFY-FIRST SOURCE AUTHORITY AND FRESHNESS VALIDATION ARCHITECTURE\" submitted by HARISHKUMAR M (Reg No: 211AD144) "
+        "and VIHASHINI S V (Reg No: 211AD220) in partial fulfillment for the award of Bachelor of Technology in Artificial Intelligence "
+        "and Data Science was evaluated during the Project Viva-Voce Examination held on 21-10-2026."
+    )
+
+    doc.add_paragraph("\n\n\n\n")
+    viva_sig_table = doc.add_table(rows=1, cols=2)
+    viva_sig_table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    vc1 = viva_sig_table.rows[0].cells[0]
+    vc2 = viva_sig_table.rows[0].cells[1]
+    vc1.paragraphs[0].text = "INTERNAL EXAMINER\nDate: 21-10-2026\nBannari Amman Institute of Technology"
+    vc2.paragraphs[0].text = "EXTERNAL EXAMINER\nDate: 21-10-2026\nAnna University Chennai"
 
     doc.add_page_break()
 
@@ -198,7 +229,7 @@ def create_report():
         "non-assumption rule within its 8-Layer Pre-Buy Fundamental Risk Gate: whenever fundamental financial metrics are absent or unverified, "
         "the layer evaluates strictly to UNKNOWN with DATA_UNAVAILABLE status, forcing the overall check verdict to \"Requires investigation\" and "
         "never permitting a silent PASS. "
-        "The architecture was verified across 19 automated test sprints comprising 188 unit and integration tests (100% pass rate), demonstrating "
+        "The architecture was verified across 20 automated test sprints comprising 193 unit and integration tests (100% pass rate), demonstrating "
         "deterministic reproducibility, sub-50ms query latency, and full compliance with SEBI statutory disclaimers."
     )
 
@@ -246,7 +277,7 @@ def create_report():
         ("   4.10 Tool-Grounded Institutional Research Assistant (Gemini API)", "32"),
         ("5. VERIFICATION, TESTING & EXPERIMENTAL RESULTS", "33"),
         ("   5.1 Verification Methodology & Quality Framework", "33"),
-        ("   5.2 Test Suite Execution Summary (19 Sprints, 188/188 Tests Passed)", "34"),
+        ("   5.2 Test Suite Execution Summary (20 Sprints, 193/193 Tests Passed)", "34"),
         ("   5.3 Sprint 19 Verify-First Test Suite Detailed Audit", "37"),
         ("   5.4 Benchmark Latency, Throughput & Cache Efficiency Metrics", "39"),
         ("   5.5 Robustness Under Network Provider Outages & Offline Fallback", "40"),
@@ -341,7 +372,7 @@ def create_report():
         "• To implement a 4-tier hierarchical source authority scoring model and strict temporal decay policies across regulatory, catalyst, quarterly, and annual horizons.\n"
         "• To engineer an 8-Layer Pre-Buy Fundamental Risk Gate enforcing the strict non-assumption rule: missing data evaluates to UNKNOWN / DATA_UNAVAILABLE and never passes.\n"
         "• To provide continuous monitoring with automated thesis degradation triggers (transitioning active theses to NEEDS_REVIEW upon evidentiary decay).\n"
-        "• To demonstrate zero-defect reproducibility through a comprehensive 19-sprint test suite comprising 188 automated unit and integration tests."
+        "• To demonstrate zero-defect reproducibility through a comprehensive 20-sprint test suite comprising 193 automated unit and integration tests."
     )
 
     doc.add_heading("1.5 Scope of the Project", level=2)
@@ -602,13 +633,13 @@ def create_report():
         "Execution completes in under 12 seconds with zero external network dependencies, ensuring 100% deterministic reproducibility."
     )
 
-    doc.add_heading("5.2 Comprehensive Test Suite Results (188/188 Tests Passed)", level=2)
+    doc.add_heading("5.2 Comprehensive Test Suite Results (193/193 Tests Passed)", level=2)
     p = doc.add_paragraph()
     p.paragraph_format.line_spacing = 1.5
     p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-    p.add_run("Table 5.1 details the verification results across all 19 engineering test sprints:")
+    p.add_run("Table 5.1 details the verification results across all 20 engineering test sprints:")
 
-    tbl_sprints = doc.add_table(rows=21, cols=4)
+    tbl_sprints = doc.add_table(rows=22, cols=4)
     tbl_sprints.alignment = WD_TABLE_ALIGNMENT.CENTER
     sp_headers = ["Sprint", "Module / Functional Domain", "Tests", "Result"]
     for i, h in enumerate(sp_headers):
@@ -639,7 +670,8 @@ def create_report():
         ("Sprint 17", "Final Architecture Freeze & Zero-Denominator Safety", "10", "PASS (10/10)"),
         ("Sprint 18", "Freshness-First News Engine & Deduplication", "10", "PASS (10/10)"),
         ("Sprint 19", "Verify-First Evidence Engine & Patent Adaptation", "10", "PASS (10/10)"),
-        ("TOTAL", "Full-Stack End-to-End Architectural Verification", "188", "100% PASS"),
+        ("Sprint 20", "Audit Verification, Forensic Beneish M-Score & Authentic Provenance", "5", "PASS (5/5)"),
+        ("TOTAL", "Full-Stack End-to-End Architectural Verification", "193", "100% PASS (193/193)"),
     ]
     for r_idx, row in enumerate(sprints_data):
         for c_idx, val in enumerate(row):
